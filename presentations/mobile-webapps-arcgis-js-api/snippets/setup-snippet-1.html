@@ -1,0 +1,62 @@
+<script>
+function snippet(containers, interlinks) {
+  require([
+    "esri/Map",
+    "esri/WebScene",
+    "esri/views/SceneView",
+    "esri/views/MapView",
+    "esri/layers/PointCloudLayer",
+    "esri/renderers/PointCloudRGBRenderer",
+    "esri/renderers/PointCloudUniqueValueRenderer"
+  ], function(
+    Map,
+    WebScene,
+    SceneView,
+    MapView,
+    PointCloudLayer,
+    PointCloudRGBRenderer,
+    PointCloudUniqueValueRenderer
+  ) {
+
+    var scene = new Map({
+      basemap: "satellite",
+      ground: "world-elevation"
+    });
+
+    var view = new SceneView({
+      map: scene,
+      container: containers.viewDiv,
+
+      ui: {
+        components: []
+      },
+    });
+
+    view.watch("camera", function(camera) {
+      interlinks.log("[Heading]", Math.round(view.camera.heading));
+    });
+
+    view.watch("extent", function(extent) {
+      interlinks.overviewMap.extent = extent;
+    });
+
+    interlinks.playButton = function() {
+      view.container = containers.viewDiv;
+    };
+
+
+    parent.window.view = view;
+
+  });
+}
+
+settings = {
+  // disableViewDiv: true,
+  // disableFPS: true,
+  // disableOverview: true,
+  // disableLog: true
+};
+
+</script>
+
+<script src="./support/snippet.js"></script>
