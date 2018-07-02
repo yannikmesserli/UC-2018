@@ -35,6 +35,7 @@
   - Apple iPhone 8
   - Apple iPad Pro 2
   - Samsung Galaxy S8
+  - Samsung Galaxy S9
   - Samsung Galaxy Tab S3
 - It's as simple as opening a webpage
   - http://www.arcgis.com/home/webscene/viewer.html
@@ -52,11 +53,11 @@
    - Browser Vendor
  
  - Poor performance can be avoided by
-   - keeping the number of layers limited (10 - 30)
-   - using appropriate symbols for every visualization
-   - using advantageous viewpoints
-   - throttling resource consumption
-   - turning off features
+   - Keeping the number of layers limited (10 - 30)
+   - Using appropriate symbols for every visualization
+   - Using advantageous viewpoints
+   - Throttling resource consumption
+   - Turning off features
 
 ---
 
@@ -197,7 +198,7 @@ else {
 <!-- .slide: data-background="images/bg-3.png" -->
 
 ### Demo
-#### Hiking app
+#### [Hiking app](https://ralucanicola.github.io/hiking-app/)
 
 ---
 

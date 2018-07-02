@@ -30,7 +30,7 @@ document.head.appendChild(create("script", {
       "dojo/on",
 
       "esri/core/declare",
-      "esri/core/Scheduler",
+      "esri/core/scheduling",
       "esri/Map",
       "esri/views/MapView",
 
