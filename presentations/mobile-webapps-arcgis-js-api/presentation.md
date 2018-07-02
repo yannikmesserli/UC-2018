@@ -1,4 +1,4 @@
-<!-- .slide: data-background="images/bg-1.png" -->
+<!-- .slide: data-background="../images/bg-1.png" -->
 
 ## Building Mobile Web Apps  
 
@@ -14,7 +14,7 @@
 
 ---
 
-<!-- .slide: data-background="images/bg-5.png" -->
+<!-- .slide: data-background="../images/bg-5.png" -->
 
 ### Topics
 
@@ -26,7 +26,7 @@
 
 ---
 
-<!-- .slide: data-background="images/bg-4.png" -->
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ### ArcGIS JavaScript API
 #### 3D on Mobile Devices
@@ -42,7 +42,7 @@
 
 ---
 
-<!-- .slide: data-background="images/bg-2.png" -->
+<!-- .slide: data-background="../images/bg-2.png" -->
 
 ### ArcGIS JavaScript API
 #### Performance
@@ -61,7 +61,7 @@
 
 ---
 
-<!-- .slide: data-background="images/bg-3.png" -->
+<!-- .slide: data-background="../images/bg-3.png" -->
 
 ### JavaScript Example
 #### Change Quality and Visualizations
@@ -117,7 +117,7 @@ require([
 
 ---
 
-<!-- .slide: data-background="images/bg-2.png" -->
+<!-- .slide: data-background="../images/bg-2.png" -->
 
 ### Progessive Web Apps
 #### Service Workers
@@ -160,7 +160,7 @@ else {
 
 ---
 
-<!-- .slide: data-background="images/bg-3.png" -->
+<!-- .slide: data-background="../images/bg-3.png" -->
 
 ### Progessive Web Apps
 #### Web App Manifest
@@ -195,14 +195,14 @@ else {
 ---
 
 
-<!-- .slide: data-background="images/bg-3.png" -->
+<!-- .slide: data-background="../images/bg-3.png" -->
 
 ### Demo
 #### [Hiking app](https://ralucanicola.github.io/hiking-app/)
 
 ---
 
-<!-- .slide: data-background="images/bg-final.jpg" -->
+<!-- .slide: data-background="../images/bg-final.jpg" -->
 
 <div style="
   margin: auto auto;

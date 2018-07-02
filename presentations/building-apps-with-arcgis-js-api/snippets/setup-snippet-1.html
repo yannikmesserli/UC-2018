@@ -1,0 +1,22 @@
+<script>
+function snippet(containers, interlinks) {
+  require([
+    "esri/WebScene",
+    "esri/views/SceneView",
+    "dojo/domReady!"
+  ], function(WebScene, SceneView) {
+    var scene = new WebScene({
+      portalItem: {
+        id: "3a9976baef9240ab8645ee25c7e9c096"
+      }
+    });
+    var view = new SceneView({
+      container: "viewDiv",
+      map: scene
+    });
+  });
+}
+
+</script>
+
+<script src="./support/snippet.js"></script>
