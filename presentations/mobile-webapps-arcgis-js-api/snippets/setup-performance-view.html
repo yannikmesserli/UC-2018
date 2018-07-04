@@ -1,11 +1,13 @@
 <script>
 function snippet(containers, interlinks) {
   require([
+    "dojo/dom-construct",
     "esri/Map",
     "esri/layers/FeatureLayer",
     "esri/layers/SceneLayer",
     "esri/views/SceneView",
   ], function(
+    domCtr,
     Map,
     FeatureLayer,
     SceneLayer,
@@ -80,11 +82,26 @@ function snippet(containers, interlinks) {
       }
     });
 
+    view.ui.add(domCtr.create("button", {
+      onclick: "window.postMessage({ play: true, arguments: 'toggleSymbol' }, '*');",
+      innerHTML: "symbol"
+    }), "top-right");
+
+    view.ui.add(domCtr.create("button", {
+      onclick: "window.postMessage({ play: true, arguments: 'toggleShadow' }, '*');",
+      innerHTML: "Shadow"
+    }), "top-right");
+
+    view.ui.add(domCtr.create("button", {
+      onclick: "window.postMessage({ play: true, arguments: 'toggleQuality' }, '*');",
+      innerHTML: "Quality"
+    }), "top-right");
+
     interlinks.log("q:", view.qualityProfile === "high" ? "h" : "l", "s:", view.environment.lighting.directShadowsEnabled ? "1" : "0");
 
     var symbolIdx = 0;
-    interlinks.playButton = function(arguments) {
-      if (arguments === "toggleSymbol") {
+    interlinks.playButton = function(action) {
+      if (action === "toggleSymbol") {
         var newSymbol;
         if (symbolIdx % 3 === 0) {
           newSymbol = symbol1;
@@ -103,11 +120,11 @@ function snippet(containers, interlinks) {
         featureLayer.renderer = renderer;
       }
 
-      if (arguments === "toggleShadow") {
+      if (action === "toggleShadow") {
         view.environment.lighting.directShadowsEnabled = !view.environment.lighting.directShadowsEnabled;
       }
 
-      if (arguments === "toggleQuality") {
+      if (action === "toggleQuality") {
         view.environment.atmosphere.quality = view.qualityProfile === "high" ? "low" : "high";
         view.qualityProfile = view.qualityProfile === "high" ? "low" : "high";
       }

@@ -107,7 +107,7 @@ document.head.appendChild(create("script", {
           fpsTask.resume();
         }
 
-
+        document.body.style.zoom = "300%";
         document.body.appendChild(containers.viewDiv);
       }
 
