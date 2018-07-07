@@ -1,14 +1,14 @@
 <!-- .slide: data-background="../images/bg-1.png" -->
 
-## <b>Building your first App</b>
+## <b>Building your first 3D App</b>
 
 <br/>
 
-<div style="margin-top: -70px; font-size: 80%; font-style: italic;">with ArcGIS API for JavaScript</div>
+<div style="margin-top: -70px; font-size: 80%; font-style: italic;">with the ArcGIS API for JavaScript</div>
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmidt - Yannik Messerli</p>
+<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
 
 ---
 
@@ -761,7 +761,7 @@
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmidt - Yannik Messerli</p>
+<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
 
 ---
 
