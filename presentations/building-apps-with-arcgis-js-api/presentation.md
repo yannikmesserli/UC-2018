@@ -1,4 +1,245 @@
+
 <!-- .slide: data-background="../images/bg-1.png" -->
+
+## Building <span style="color:#D9BA6F">3D</span> Apps <br/> with ArcGIS API for JavaScript
+
+<p>Veronika Landers - Yannik Messerli - Johannes Schmidt</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b> <span style="color:#D9BA6F">3D</span> GIS across industries</b>
+
+<br/>
+
+<img class="plain" src="../images/3d-gis-industries.png" height=550 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b> <span style="color:#D9BA6F">3D</span> GIS across industries</b>
+
+<br/>
+
+<div class="box" style="display:inline-block; width:500px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=c5b58fa63714412eb0eea933a130ebdf&ui=min" height=500 align=left></iframe></div>
+
+<div class="box" style="display:inline-block; width:500px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=43e1b988e55a44fdad6c5cf58c34dbda&ui=min" height=500></iframe></div>
+
+---
+
+<!-- .slide: data-background="../images/bg-1.png" -->
+### <b>Agenda</b>
+
+- Introduction
+- API Concepts
+- Publishing Content
+- Building your first app
+- Extend your app
+- Samples
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+## <b>Introduction</b>
+
+<br/>
+
+<p>Veronika Landers</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>The ArcGIS Platform</b>
+
+
+<img class="plain" src="../images/platform.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>The ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
+
+
+<img class="plain" src="../images/platform-3d.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Esri Provides out-of-the-box <span style="color:#D9BA6F">3D</span> Web Apps</b>
+
+
+<img class="plain" src="../images/appsamples.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Building Apps with the ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
+
+
+<img class="plain" src="../images/platform-3d-js.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Build Your Own custom <span style="color:#D9BA6F">3D</span> Web Apps</b>
+
+
+<img class="plain" src="../images/appsamples.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+### <b>ArcGIS JavaScript API</b>
+
+<br/>
+<img class="plain" src="../images/js-doc.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+### <b>ArcGIS JavaScript API</b>
+
+  - Visual mapping (2D & 3D), component and widgets
+  - Support for various different layer types (data sources)
+  - Integration with the ArcGIS platform
+    <br/>(security, sign-in, premium services, …)
+
+<br/>
+
+<b><span style="color:#D9BA6F">Get it today</span></b>
+- Hosted build https://js.arcgis.com/4.8   
+- Doc/samples https://developers.arcgis.com/javascript
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Desktop <span style="color:#D9BA6F">3D</span> Requirements</b>
+
+<br/>
+
+- Modern hardware, especially Graphics Card
+
+- Latest web browsers with WebGL support
+  - Chrome
+  - Edge / Internet Explorer 11* (* not optimized)
+  - Firefox
+  - Safari
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+
+### <b>Mobile <span style="color:#D9BA6F">3D</span> Requirements</b>
+
+<br/>
+
+- Mobile support for the following devices
+  - iOS — iPhone 8, iPad Pro (Safari)
+  - Android — Samsung S8/S9 (Chrome)
+  - Android - Samsung Tab S3 (Chrome)
+
+- Other devices "at your own risk" :)
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>3D Concepts</b>
+
+- Visualization of 2D and 3D data
+
+- Ground surface
+
+- Navigation and Camera
+
+- Light and shadows
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+## <b>API Concepts</b>
+
+<br/>
+
+<p>Johannes Schmid</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+## <b>Publishing Content</b>
+
+<br/>
+
+<p>Veronika Landers</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes</b>
+
+- Vehicle for cross platform 3D capability
+- Collection of layers, environment settings, slides
+- Essential for 3D apps on any platform or experience
+- Scene Viewer can create and read Web Scenes
+- Web AppBuilder and Templates also support reading Web Scenes
+- Web Scenes can also be used in Story Maps
+- ArcGIS Pro can share Web Scenes to ArcGIS Online
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes</b>
+
+Defines the content of a Web Scene
+Serialized as JSON
+Across the platform 
+ArcGIS Pro
+JS API (Scene Viewer, Story Maps, Web AppBuilder, …)
+Runtime soon
+Stored in ArcGIS Online or Enterprise (Portal)
+Specification (similar to Web Map)
+Operational layers (with styling overrides) 
+Base map, slides, initial state (position and light)
+Metadata: scene type, spatial reference, version...
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>The concept of global and local scenes</b>
+
+- Cached data for faster rendering
+
+- Global scenes means choosing geographic coordinate systems
+  - WebMercator (wkid: 3857)
+  - WGS84 (wkid: 4326)
+
+- Local scenes means choosing any projected coordinate system
+
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## <b>Building your first App</b>
 
@@ -8,7 +249,7 @@
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmidt - Yannik Messerli</p>
+<p>Yannik Messerli</p>
 
 ---
 
@@ -433,6 +674,6 @@
 
 <!-- .slide: data-background="../images/bg-5.png" -->
 
-### Topics
+### Thank you
 
-<iframe id="scene-view-map-view" data-src="http://devext.arcgis.com/home/webscene/viewer.html?webscene=b351d0face0742bc87e0c8e15032543c&ui=min" ></iframe>
+<iframe id="scene-view-map-view" data-src="http://www.arcgis.com/home/webscene/viewer.html?webscene=49345e11fbf041dfb791b58d3baf7905&ui=min" style="width:30%;height:30%;"</iframe>
