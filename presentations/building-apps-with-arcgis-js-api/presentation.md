@@ -769,7 +769,7 @@
 
 ### Topics
 
-- Skyscrapper explorer
+- Skyscraper explorer
 - Hiking App
 - [C-Through](https://esri.github.io/c-through/)
 - [Satellite map](http://richiecarmichael.github.io/sat/index.html)
