@@ -678,7 +678,8 @@ span.hljs-string {
 
 .reveal .snippet-preview iframe {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 12px;
+  margin: 51px 13px 72px 11px;
+  padding: 0px;
 
   background-color: rgba(0, 0, 0, 0.3);
 
@@ -691,7 +692,8 @@ span.hljs-string {
   -webkit-linear-gradient(0, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 
   width: 100%;
-  min-height: 450px;
+  max-width: 33%;  
+  min-height: 389px;
 }
 
 .reveal .snippet {
@@ -743,4 +745,8 @@ span.hljs-string {
 
 .reveal pre code.grey, .reveal pre code.grey .hljs, .reveal pre code.grey span, .grey .hljs-addition, .grey .hljs-comment, .grey .hljs-quote, .grey .hljs-meta {
   color: rgba(255,255,255,0.4);
+}
+
+.reveal li > p {
+  margin: 0;
 }

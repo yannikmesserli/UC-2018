@@ -1,10 +1,8 @@
 <!-- .slide: data-background="../images/bg-1.png" -->
 
-## Building Mobile Web Apps  
+## Building Mobile **3D** Web Apps  
 
-<br/>
-
-### ArcGIS API for JavaScript
+#### ArcGIS API for JavaScript
 
 <br/>
 
@@ -16,104 +14,158 @@
 
 <!-- .slide: data-background="../images/bg-5.png" -->
 
-### Topics
+# It's ready already!
 
-- 3D on Mobile Devices
-- Performance
-- JavaScript API Example
-- Progressive Web Apps
-- Demo
+[Test it](http://www.arcgis.com/home/webscene/viewer.html)
 
 ---
 
-<!-- .slide: data-background="../images/bg-4.png" -->
+<!-- .slide: data-background="../images/bg-5.png" -->
 
-### ArcGIS JavaScript API
-#### 3D on Mobile Devices
+### Topics
 
-- Works on mobile
-  - Apple iPhone 8
-  - Apple iPad Pro 2
-  - Samsung Galaxy S8
-  - Samsung Galaxy S9
-  - Samsung Galaxy Tab S3
-- It's as simple as opening a webpage
-  - http://www.arcgis.com/home/webscene/viewer.html
+- Performance
+  - Supported devices
+  - Tips for better performance
+<!--     - Number of features, feature symbology
+    - Rendering quality
+    - Shadow & lighting -->
+- Build the best mobile experience (PWAs)
+  - Service workers
+  - App manifest
 
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### ArcGIS JavaScript API
-#### Performance
+### Performance
 
- - Performance can vary across
+- Performance can vary across
    - Hardware
    - Operating System
    - Browser Vendor
- 
- - Poor performance can be avoided by
-   - Keeping the number of layers limited (10 - 30)
-   - Using appropriate symbols for every visualization
-   - Using advantageous viewpoints
-   - Throttling resource consumption
-   - Turning off features
+
+- And depends heavily on
+   - The number of features and their symbology
+   - The environement 
+   - The rendering quality
+
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### Performance
+
+Best on our officially supported devices:
+  - Apple iPhone 8
+  - Apple iPad Pro 2
+  - Samsung Galaxy S8
+  - Samsung Galaxy S9
+  - Samsung Galaxy Tab S3
 
 ---
 
 <!-- .slide: data-background="../images/bg-3.png" -->
 
-### JavaScript Example
-#### Change Quality and Visualizations
+### Performance tips
+#### Number of features and symbols
+
+Complex visualisation will decrease performance.
+
 <div class="twos">
   <div>
-    <pre style="margin-left: 100px"><code class="lang-js hljs javascript">
-require([
-  "esri/Map",
-  "esri/layers/FeatureLayer",
-  "esri/layers/SceneLayer",
-  "esri/views/SceneView"
-], function(
-  Map,
-  FeatureLayer,
-  SceneLayer,
-  SceneView
-) {
-  var view = new SceneView({
-    map: new Map({
-      basemap: "satellite",
-      ground: "world-elevation",
-      layers: [
-        new FeatureLayer({ url: "//services.arcgis.com/..." }),
-        new SceneLayer({ url: "//services.arcgis.com/..." })
-      ]
-    }),
-    container: "viewDiv"
-  });
-});
+    <pre style="margin-left: 100px; font-size: 110%;"><code class="lang-js hljs javascript">
+      var newSymbol = {
+        type: "point-3d",
+        symbolLayers: [{
+          type: "object",
+          width: 500,
+          height: 500,
+          depth: 500,
+          resource: { primitive: "cube" },
+          material: { color: "red" }
+        }]
+      };
+
+      var renderer = featureLayer.renderer.clone();
+      renderer.symbol = newSymbol;
+      featureLayer.renderer = renderer;
     </code></pre>
-    <br>
-    <small>
-      <table>
-        <tr>
-          <td><img style="margin: 2px; width: 30px" data-play-frame="frame-performance-view" data-play-attributes="toggleSymbol" src="./images/toggle-symbol.png"></td>
-          <td style="padding: 10px">featureLayer.renderer.symbol</td>
-        </tr>
-        <tr>
-          <td><img style="margin: 2px; width: 30px" data-play-frame="frame-performance-view" data-play-attributes="toggleShadow" src="./images/toggle-shadow.png"></td>
-          <td style="padding: 10px">view.environment.lighting.directShadowsEnabled</td>
-        </tr>
-        <tr>
-          <td><img style="margin: 2px; width: 30px" data-play-frame="frame-performance-view" data-play-attributes="toggleQuality" src="./images/toggle-quality.png"></td>
-          <td style="padding: 10px">view.qualityProfile<br>view.environment.atmosphere.quality</td>
-        </tr>
-      </table>
-    </small>
   </div>
   <div class="snippet-preview">
-    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html"></iframe>
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
   </div>
 </div>
+
+---
+
+<!-- .slide: data-background="../images/bg-3.png" -->
+
+### Performance tips
+#### Rendering: shadows
+
+Shadow is costly to render.
+
+<div class="twos">
+  <div>
+    <pre style="margin-left: 0px; font-size: 140%;"><code class="lang-js hljs javascript" style="margin-left: -50px; padding-right: 50px;">
+      view.environment
+       .lighting.directShadowsEnabled = false;
+    </code></pre>
+  </div>
+  <div class="snippet-preview">
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
+  </div>
+</div>
+
+---
+
+<!-- .slide: data-background="../images/bg-3.png" -->
+
+### Performance tips
+#### Rendering quality
+
+High rendering settings decrease performance.
+
+<div class="twos">
+  <div>
+    <pre style="font-size: 140%;"><code class="lang-js hljs javascript" style="margin-left: -50px; padding-right: 50px;">
+      view.environment.atmosphere.quality = "low";
+      view.qualityProfile = "low";
+    </code></pre>
+  </div>
+  <div class="snippet-preview">
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
+  </div>
+</div>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+## Progressive web app
+
+<div style="max-width: 900px; font-weight: lighter; margin: auto; padding: 30px; background: rgba(0,0,0,0.5)">A progressive web app uses standard web technology to handle vast variety of client's browsers, interruption of connection, fast user interraction to give the best mobile experience.
+</div>
+
+[Google documentation](https://developers.google.com/web/progressive-web-apps/)
+
+Topics:
+
+- Service workers
+- App manifest
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### Service Workers
+#### Definition
+
+Service workers are Javascript scripts run by modern browsers to handle slow or intermittent network connectivity. They sit between your applications, the browser, and the network and take appropriate actions based on whether the network is available or the resource is cached.
+
+[Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 ---
 

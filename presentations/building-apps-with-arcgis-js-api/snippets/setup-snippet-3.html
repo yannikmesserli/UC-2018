@@ -1,0 +1,41 @@
+<script>
+function snippet(containers, interlinks) {
+  require([
+    "esri/WebScene",
+    "esri/views/SceneView",
+    "esri/layers/FeatureLayer",
+    "esri/widgets/Search",
+    "dojo/domReady!"
+  ], function(WebScene, SceneView, FeatureLayer, Search) {
+    var scene = new WebScene({
+      portalItem: {
+        id: "3a9976baef9240ab8645ee25c7e9c096"
+      }
+    });
+    var view = new SceneView({
+      container: "viewDiv",
+      map: scene
+    });
+    var searchWidget = new Search({
+      view: view
+    });
+    var layer = new FeatureLayer({
+      url: "//sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0"
+    });
+    scene.add(layer);
+    view.ui.add(searchWidget, {
+      position: "top-right"
+    });
+
+    scene.when(function(){
+      return layer.queryExtent();
+    })
+    .then(function(response){
+      view.extent = response.extent;
+    });
+  });
+}
+
+</script>
+
+<script src="./support/snippet.js"></script>
