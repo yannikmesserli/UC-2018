@@ -13,7 +13,7 @@
 
 <br/>
 
-<img class="plain" src="../images/3d-gis-industries.png" height=550 background=none>
+<img class="plain" src="./images/3d-gis-industries.png" height=550 background=none>
 
 ---
 
@@ -56,7 +56,7 @@
 ### <b>The ArcGIS Platform</b>
 
 
-<img class="plain" src="../images/platform.png" height=500 background=none>
+<img class="plain" src="./images/platform.png" height=500 background=none>
 
 ---
 
@@ -65,7 +65,7 @@
 ### <b>The ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
 
 
-<img class="plain" src="../images/platform-3d.png" height=500 background=none>
+<img class="plain" src="./images/platform-3d.png" height=500 background=none>
 
 ---
 
@@ -74,7 +74,7 @@
 ### <b>Esri Provides out-of-the-box <span style="color:#D9BA6F">3D</span> Web Apps</b>
 
 
-<img class="plain" src="../images/appsamples.png" height=500 background=none>
+<img class="plain" src="./images/appsamples.png" height=500 background=none>
 
 ---
 
@@ -83,7 +83,7 @@
 ### <b>Building Apps with the ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
 
 
-<img class="plain" src="../images/platform-3d-js.png" height=500 background=none>
+<img class="plain" src="./images/platform-3d-js.png" height=500 background=none>
 
 ---
 
@@ -92,7 +92,7 @@
 ### <b>Build Your Own custom <span style="color:#D9BA6F">3D</span> Web Apps</b>
 
 
-<img class="plain" src="../images/appsamples.png" height=500 background=none>
+<img class="plain" src="./images/appsamples.png" height=500 background=none>
 
 ---
 
@@ -100,7 +100,7 @@
 ### <b>ArcGIS JavaScript API</b>
 
 <br/>
-<img class="plain" src="../images/js-doc.png" height=500 background=none>
+<img class="plain" src="./images/js-doc.png" height=500 background=none>
 
 ---
 
@@ -168,7 +168,7 @@
 
 ### <b>Provide content for your apps (2)</b>
 
-<img class="plain" src="../images/publish.png" height=600 background=none>
+<img class="plain" src="./images/publish.png" height=600 background=none>
 
 ---
 
