@@ -751,7 +751,7 @@
 ## Architecture
 
 
-To do
+<img src="../images/concepts-architecture.png" width="800" style="border: none; background: none; box-shadow: none"/>
 
 ---
 
