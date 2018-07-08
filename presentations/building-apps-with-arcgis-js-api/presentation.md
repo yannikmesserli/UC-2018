@@ -71,7 +71,7 @@
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Esri Provides out-of-the-box <span style="color:#D9BA6F">3D</span> Web Apps</b>
+### <b>Out-of-the-box <span style="color:#D9BA6F">3D</span> Web Apps</b>
 
 
 <img class="plain" src="./images/appsamples.png" height=500 background=none>
@@ -89,10 +89,10 @@
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Build Your Own custom <span style="color:#D9BA6F">3D</span> Web Apps</b>
+### <b>Custom <span style="color:#D9BA6F">3D</span> Web Apps</b>
 
 
-<img class="plain" src="./images/appsamples.png" height=500 background=none>
+<img class="plain" src="./images/customsamples.png" height=500 background=none>
 
 ---
 
@@ -158,8 +158,11 @@
 ### <b>Provide content for your apps (1)</b>
 
 1. Process data
-2. Publish data - individually or as a web scene
+
+2. Publish data as individual layers or a web scene
+
 3. Configure and schedule cache generation
+
 4. Integrate and configure layers for multiple usage on the web
 
 ---
@@ -225,13 +228,10 @@
 - Vehicle for cross platform 3D capabilities
 - Collection of layers, environment settings, slides
 - Read and write Web Scenes across the ArcGIS platform
-  - Scene Viewer
-  - Web AppBuilder and Templates (read only)
-  - Story Maps (read only)
-  - ArcGIS Pro
-  - ArcGIS Runtime
-  - ArcGIS Javascript API
- 
+
+<img class="plain" src="./images/platform-webscene.png" background=none>
+
+
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
@@ -1067,7 +1067,7 @@
 
 ### Please Take Our Survey on the App
 
-<img class="plain" src="../images/survey.png" background=none>
+<img class="plain" src="./images/survey.png" background=none>
 
 
 ---
