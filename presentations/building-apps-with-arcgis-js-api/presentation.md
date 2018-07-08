@@ -34,10 +34,8 @@
 <!-- .slide: data-background="../images/bg-1.png" -->
 ### <b>Agenda</b>
 
-- Introduction
-- API Concepts
-- Publishing Content
-- Building your first app
+- Introduction to 3D
+- Build your app
 - Extend your app
 - Samples
 
@@ -45,7 +43,7 @@
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Introduction</b>
+## <b>Introduction to 3D</b>
 
 <br/>
 
@@ -132,7 +130,7 @@
 
 - Latest web browsers with WebGL support
   - Chrome
-  - Edge / Internet Explorer 11* (* not optimized)
+  - Edge / Internet Explorer 11\* (\*WebGL not optimized)
   - Firefox
   - Safari
 
@@ -150,91 +148,119 @@
   - Android — Samsung S8/S9 (Chrome)
   - Android - Samsung Tab S3 (Chrome)
 
-- Other devices "at your own risk" :)
+- Other devices *only at your own risk* :)
+
 
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
----
+### <b>Provide content for your apps (1)</b>
 
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>3D Concepts</b>
-
-- Visualization of 2D and 3D data
-
-- Ground surface
-
-- Navigation and Camera
-
-- Light and shadows
-
----
-
-<!-- .slide: data-background="../images/bg-4.png" -->
-
-## <b>API Concepts</b>
-
-<br/>
-
-<p>Johannes Schmid</p>
-
----
-
-<!-- .slide: data-background="../images/bg-4.png" -->
-
-## <b>Publishing Content</b>
-
-<br/>
-
-<p>Veronika Landers</p>
+1. Process data
+2. Publish data - individually or as a web scene
+3. Configure and schedule cache generation
+4. Integrate and configure layers for multiple usage on the web
 
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Web Scenes</b>
+### <b>Provide content for your apps (2)</b>
 
-- Vehicle for cross platform 3D capability
-- Collection of layers, environment settings, slides
-- Essential for 3D apps on any platform or experience
-- Scene Viewer can create and read Web Scenes
-- Web AppBuilder and Templates also support reading Web Scenes
-- Web Scenes can also be used in Story Maps
-- ArcGIS Pro can share Web Scenes to ArcGIS Online
+<img class="plain" src="../images/publish.png" height=600 background=none>
 
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Web Scenes</b>
+### <b>Global and local scenes</b>
 
-Defines the content of a Web Scene
-Serialized as JSON
-Across the platform 
-ArcGIS Pro
-JS API (Scene Viewer, Story Maps, Web AppBuilder, …)
-Runtime soon
-Stored in ArcGIS Online or Enterprise (Portal)
-Specification (similar to Web Map)
-Operational layers (with styling overrides) 
-Base map, slides, initial state (position and light)
-Metadata: scene type, spatial reference, version...
+- Cached data for faster rendering with dynamic data on the fly
 
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>The concept of global and local scenes</b>
-
-- Cached data for faster rendering
-
-- Global scenes means choosing geographic coordinate systems
+- Global scenes for *full globe visualizations*
+  
+  Choose one of two geographic coordinate systems
   - WebMercator (wkid: 3857)
   - WGS84 (wkid: 4326)
 
-- Local scenes means choosing any projected coordinate system
+- Local scenes for *local cartesian visualizations*
+  
+  Choose any projected coordinate system
+
+  Clip to your area of interest
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Ground</b>
+
+- Elevation surface
+- Draped layers
+- NEW render just a solid color
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Navigation</b>
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Light & Shadows</b>
+
+- 
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes Concept</b>
+
+- Vehicle for cross platform 3D capabilities
+- Collection of layers, environment settings, slides
+- Read and write Web Scenes across the ArcGIS platform
+  - Scene Viewer
+  - Web AppBuilder and Templates (read only)
+  - Story Maps (read only)
+  - ArcGIS Pro
+  - ArcGIS Runtime
+  - ArcGIS Javascript API
+ 
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes Specification</b>
+
+- Defines the content of a Web Scene
+- Follows a specification (similar to Web Map)
+- Serialized as JSON
+- Stored in ArcGIS Online or Enterprise (Portal)
+- Operational layers (with styling overrides) 
+- Base map, slides, initial state (position and light)
+- Metadata: scene type, spatial reference, version...
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Summary</b>
+
+- 2D and 3D data can be visualized globally and locally.
+
+- Ground represents the earth surface.
+
+- Camera is used for specific views and navigation.
+
+- 3D allows you to light up and render shadows.
+
+- 3D on the web requires latest technology.
 
 
 ---
@@ -978,6 +1004,16 @@ Metadata: scene type, spatial reference, version...
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+## <b>Extend your App</b>
+
+<br/>
+
+<p>Johannes Schmid</p>
+
+---
+
 <!-- .slide: data-background="../images/bg-1.png" -->
 
 ## <b>And much more...</b> 
@@ -1019,8 +1055,24 @@ Metadata: scene type, spatial reference, version...
 
 ---
 
-<!-- .slide: data-background="../images/bg-5.png" -->
+<!-- .slide: data-background="../images/bg-9.png" -->
 
 ### Thank you
 
 <iframe id="scene-view-map-view" data-src="http://www.arcgis.com/home/webscene/viewer.html?webscene=49345e11fbf041dfb791b58d3baf7905&ui=min" style="width:30%;height:30%;"</iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### Please Take Our Survey on the App
+
+<img class="plain" src="../images/survey.png" background=none>
+
+
+---
+
+<!-- .slide: data-background="../images/bg-8.png" -->
+
+<img class="plain" src="../images/esri-science-logo-white.png" background=none>
+
