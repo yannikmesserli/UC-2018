@@ -493,9 +493,7 @@
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
-
-### That's it
+## Your first 3D app!
 
 <div class="two-columns">
   <div class="left-column">
@@ -706,10 +704,9 @@
 
 <div style="max-width:70%;margin: auto; margin-bottom: 50px;">Widgets are UI components that add functionalities to your scene.  The API provides ready-to-use widgets, for example:</div>
 
-- `Legend` widget: provides extra information your scene and your layers
-- `LayerList` widget: lists your scene's layers with an easy way toggle them on/off
-- `Search` widget: enables search for features and locations within your scene
-- ...
+- `Legend`
+- `LayerList`
+- `Search`
 
 
 ---
