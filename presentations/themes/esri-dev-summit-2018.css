@@ -240,6 +240,7 @@ body {
 
 .reveal section img.plain {
   border: 0;
+  background: 0;
   box-shadow: none; }
 
 .reveal a img {
@@ -748,4 +749,15 @@ span.hljs-string {
 
 .reveal li > p {
   margin: 0;
+}
+
+#frame-performance-view {
+  width: 300%;
+  max-width: 300%;
+  min-height: 1200px;
+
+     margin-top: -53%;
+    margin-left: -32%;
+    margin-right: 32%;
+    margin-bottom: 70%;
 }

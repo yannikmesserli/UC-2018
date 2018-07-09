@@ -1,4 +1,271 @@
+
 <!-- .slide: data-background="../images/bg-1.png" -->
+
+## Building <span style="color:#D9BA6F">3D</span> Apps <br/> with ArcGIS API for JavaScript
+
+<p>Veronika Landers - Yannik Messerli - Johannes Schmidt</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b> <span style="color:#D9BA6F">3D</span> GIS across industries</b>
+
+<br/>
+
+<img class="plain" src="./images/3d-gis-industries.png" height=550 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b> <span style="color:#D9BA6F">3D</span> GIS across industries</b>
+
+<br/>
+
+<div class="box" style="display:inline-block; width:500px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=c5b58fa63714412eb0eea933a130ebdf&ui=min" height=500 align=left></iframe></div>
+
+<div class="box" style="display:inline-block; width:500px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=43e1b988e55a44fdad6c5cf58c34dbda&ui=min" height=500></iframe></div>
+
+---
+
+<!-- .slide: data-background="../images/bg-1.png" -->
+### <b>Agenda</b>
+
+- Introduction to 3D
+- Build your app
+- Extend your app
+- Samples
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+## <b>Introduction to 3D</b>
+
+<br/>
+
+<p>Veronika Landers</p>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>The ArcGIS Platform</b>
+
+
+<img class="plain" src="./images/platform.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>The ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
+
+
+<img class="plain" src="./images/platform-3d.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Out-of-the-box <span style="color:#D9BA6F">3D</span> Web Apps</b>
+
+
+<img class="plain" src="./images/appsamples.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Building Apps with the ArcGIS <span style="color:#D9BA6F">3D</span> Platform</b>
+
+
+<img class="plain" src="./images/platform-3d-js.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Custom <span style="color:#D9BA6F">3D</span> Web Apps</b>
+
+
+<img class="plain" src="./images/customsamples.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+### <b>ArcGIS JavaScript API</b>
+
+<br/>
+<img class="plain" src="./images/js-doc.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+### <b>ArcGIS JavaScript API</b>
+
+  - Visual mapping (2D & 3D), component and widgets
+  - Support for various different layer types (data sources)
+  - Integration with the ArcGIS platform
+    <br/>(security, sign-in, premium services, …)
+
+<br/>
+
+<b><span style="color:#D9BA6F">Get it today</span></b>
+- Hosted build https://js.arcgis.com/4.8   
+- Doc/samples https://developers.arcgis.com/javascript
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Desktop <span style="color:#D9BA6F">3D</span> Requirements</b>
+
+<br/>
+
+- Modern hardware, especially Graphics Card
+
+- Latest web browsers with WebGL support
+  - Chrome
+  - Edge / Internet Explorer 11\* (\*WebGL not optimized)
+  - Firefox
+  - Safari
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+
+### <b>Mobile <span style="color:#D9BA6F">3D</span> Requirements</b>
+
+<br/>
+
+- Mobile support for the following devices
+  - iOS — iPhone 8, iPad Pro (Safari)
+  - Android — Samsung S8/S9 (Chrome)
+  - Android - Samsung Tab S3 (Chrome)
+
+- Other devices *only at your own risk* :)
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Provide content for your apps (1)</b>
+
+1. Process data
+
+2. Publish data as individual layers or a web scene
+
+3. Configure and schedule cache generation
+
+4. Integrate and configure layers for multiple usage on the web
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Provide content for your apps (2)</b>
+
+<img class="plain" src="./images/publish.png" height=600 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Global and local scenes</b>
+
+- Cached data for faster rendering with dynamic data on the fly
+
+- Global scenes for *full globe visualizations*
+  
+  Choose one of two geographic coordinate systems
+  - WebMercator (wkid: 3857)
+  - WGS84 (wkid: 4326)
+
+- Local scenes for *local cartesian visualizations*
+  
+  Choose any projected coordinate system
+
+  Clip to your area of interest
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Ground</b>
+
+- Elevation surface
+- Draped layers
+- NEW render just a solid color
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Navigation</b>
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Light & Shadows</b>
+
+- 
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes Concept</b>
+
+- Vehicle for cross platform 3D capabilities
+- Collection of layers, environment settings, slides
+- Read and write Web Scenes across the ArcGIS platform
+
+<img class="plain" src="./images/platform-webscene.png" background=none>
+
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Web Scenes Specification</b>
+
+- Defines the content of a Web Scene
+- Follows a specification (similar to Web Map)
+- Serialized as JSON
+- Stored in ArcGIS Online or Enterprise (Portal)
+- Operational layers (with styling overrides) 
+- Base map, slides, initial state (position and light)
+- Metadata: scene type, spatial reference, version...
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Summary</b>
+
+- 2D and 3D data can be visualized globally and locally.
+
+- Ground represents the earth surface.
+
+- Camera is used for specific views and navigation.
+
+- 3D allows you to light up and render shadows.
+
+- 3D on the web requires latest technology.
+
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## <b>Building your first 3D App</b>
 
@@ -8,7 +275,7 @@
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
+<p>Yannik Messerli</p>
 
 ---
 
@@ -28,9 +295,7 @@
 
 ### Creating basic HTML file
 
-<div class="two-columns">
-  <div class="left-column">
-    <div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="lang-html">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -73,12 +338,6 @@
     </div>
 
 
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -87,10 +346,7 @@
 
 ### Reference the ArcGIS API for JavaScript
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -133,12 +389,6 @@
     </div>
 
 
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -147,10 +397,7 @@
 
 ### Load the module
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -196,12 +443,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
 
 ---
 
@@ -211,10 +452,7 @@
 
 ### Create the webscene
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -260,13 +498,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -275,10 +506,7 @@
 
 ### Create the view
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -315,7 +543,7 @@
             map: scene
           });
     </code>
-    <code style="margin-bottom: -30px;" class="grey">
+    <code class="grey">
         });
       &lt;/script&gt;
       &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;
@@ -324,12 +552,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
 
 ---
 
@@ -397,7 +619,7 @@
 
 ## Details about the `Webscene` class
 
-- `Layers`, `Slides`, ...
+- `Layers`, `Presentation`, ...
 - `Basemap` is exactly the same concept as in 2D
 - `Ground` defines the ground surface of the scene
 
@@ -409,17 +631,17 @@
 
 | Layer type   | Characteristics | |
 |--------------|-----------------|-|
-| `FeatureLayer` | vector | <small>2d & 3D</small> |
-| `CSVLayer` | vector | <small>2d & 3D</small> |
-| `StreamLayer` | vector | <small>2d & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2d & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2d & 3D</small> |
-| `WMSLayer` | dynamic | <small>2d & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2d & 3D</small> |
-| `TileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2d & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2d & 3D</small> |
+| `FeatureLayer` | vector | <small>2D & 3D</small> |
+| `CSVLayer` | vector | <small>2D & 3D</small> |
+| `StreamLayer` | vector | <small>2D & 3D</small> |
+| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
+| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
+| `WMSLayer` | dynamic | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
+| `TileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
+| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
 | `ElevationLayer` | raster, cached | <small> 3D only</small> |
 | `SceneLayer` | vector | <small> 3D only</small> |
 | `IntegratedMeshLayer` | vector | <small> 3D only</small> |
@@ -433,19 +655,19 @@
 
 | Layer type   | Characteristics | |
 |--------------|-----------------|-|
-| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`FeatureLayer`</div> | vector | <small>2d & 3D</small> |
-| `CSVLayer` | vector | <small>2d & 3D</small> |
-| `StreamLayer` | vector | <small>2d & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2d & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2d & 3D</small> |
-| `WMSLayer` | dynamic | <small>2d & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2d & 3D</small> |
-| `TileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2d & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2d & 3D</small> |
+| `FeatureLayer` | vector | <small>2D & 3D</small> |
+| `CSVLayer` | vector | <small>2D & 3D</small> |
+| `StreamLayer` | vector | <small>2D & 3D</small> |
+| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
+| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
+| `WMSLayer` | dynamic | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
+| `TileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
+| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
 | `ElevationLayer` | raster, cached | <small> 3D only</small> |
-| `SceneLayer` | vector | <small> 3D only</small> |
+| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`SceneLayer`</div> | vector | <small> 3D only</small> |
 | `IntegratedMeshLayer` | vector | <small> 3D only</small> |
 | `PointCloudLayer` | vector | <small> 3D only</small> |
 
@@ -455,23 +677,20 @@
 
 ## Adding a layer
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet" style="font-size: 140%;">
+<div class="code-snippet" style="font-size: 140%; max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -40px;" class="grey">
         require([
           "esri/WebScene",
           "esri/views/SceneView",
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          "esri/layers/FeatureLayer",
+          "esri/layers/SceneLayer",
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           "dojo/domReady!"
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-        ], function(WebScene, SceneView, FeatureLayer) {
+        ], function(WebScene, SceneView, SceneLayer) {
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           var scene = new WebScene({
@@ -485,24 +704,18 @@
           });
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          var layer = new FeatureLayer({
+          var layer = new SceneLayer({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "2e0761b9a4274b8db52c4bf34356911e"
             }
           });
           scene.add(layer);
     </code>
     <code class="grey">
+          // Go to layer..
         });
     </code></pre>
     </div>
-
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" ></iframe>
-  </div>
-</div>
 
 ---
 
@@ -518,9 +731,9 @@
         require([
           "esri/WebScene",
           "esri/views/SceneView",
-          "esri/layers/FeatureLayer",
+          "esri/layers/SceneLayer",
           "dojo/domReady!"
-        ], function(WebScene, SceneView, FeatureLayer) {
+        ], function(WebScene, SceneView, SceneLayer) {
           var scene = new WebScene({
             portalItem: {
               id: "3a9976baef9240ab8645ee25c7e9c096"
@@ -530,12 +743,13 @@
             container: "viewDiv",
             map: scene
           });
-          var layer = new FeatureLayer({
+          var layer = new SceneLayer({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "2e0761b9a4274b8db52c4bf34356911e"
             }
           });
           scene.add(layer);
+          // Go to layer...
         });
     </code></pre>
     </div>
@@ -568,10 +782,8 @@
 
 ## Adding a widget
 
-<div class="two-columns">
-  <div class="left-column">
 
-<div class="code-snippet" style="font-size: 140%;">
+<div class="code-snippet" style="font-size: 140%;max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -40px;" class="grey">
         require([
           "esri/WebScene",
@@ -594,7 +806,7 @@
     </code>
     <code style="margin-bottom: -40px;" class="grey">
 
-          ...
+          // ...
 
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
@@ -610,12 +822,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" ></iframe>
-  </div>
-</div>
 
 ---
 
@@ -641,7 +847,7 @@
           Search
         ) {
 
-          ...
+          // ...
 
           var searchWidget = new Search({
             view: view
@@ -668,7 +874,28 @@
 
 <div class="two-columns">
   <div class="left-column">
-      The popup widget allows users to view content from the feature attributes. 
+The popup widget allows users to view content from the feature attributes. 
+
+
+<br><br>
+<div>
+You can enable it programmatically:
+</div>
+      <div class="code-snippet" style="font-size: 120%;margin-top: 50px;">
+        <pre><code class="lang-js">
+  view.on("click", function(event) {
+    event.stopPropagation();
+    view.popup.open({
+      title: "Reverse geocode: [" 
+        + event.mapPoint.longitude 
+        + ", " + event.mapPoint.latitude 
+        + "]",
+      location: event.mapPoint
+    });
+  });
+        </code></pre>
+      </div>
+
   </div>
   <div class="right-column">
     <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-3.html"></iframe>
@@ -679,24 +906,22 @@
 
 <!-- .slide: data-background="../images/bg-7.png" -->
 
-## Intro to popup
+## Popup templates
 
 <div class="two-columns">
   <div class="left-column">
-
-<div class="code-snippet" style="font-size: 140%;">
-    <pre><code class="lang-js">
-      view.on("click", function(event) {
-        event.stopPropagation();
-        view.popup.open({
-          title: "Reverse geocode: [" + lon + ", " + lat + "]",
-          location: event.mapPoint
-        });
-      });
-    </code></pre>
+    Display attribute using the `PopupTemplate`
+    <div class="code-snippet" style="font-size: 130%;">
+      <pre><code class="lang-js">
+  var template = {
+    title: "Building <b>{NAME}</b>",
+    content: "This build has <b>{NUM_FLOORS}</b> floors," 
+      + " for a height of <b>{HEIGHTROOF}</b> ft.<br/>"
+      + "It has been built in <b>{CNSTRCT_YR}.</b>"
+  };
+  layer.popupTemplate = template;
+      </code></pre>
     </div>
-
-
   </div>
   <div class="right-column">
     <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-4.html"></iframe>
@@ -705,35 +930,13 @@
 
 ---
 
-<!-- .slide: data-background="../images/bg-7.png" -->
+<!-- .slide: data-background="../images/bg-4.png" -->
 
-## Adding a popup template for your attributes
+## <b>Extend your App</b>
 
-<div class="two-columns">
-  <div class="left-column">
-    - Each view has a popup associated with it
-    - You can custom the popup display using the `PopupTemplate`
-    <div class="code-snippet" style="font-size: 140%;">
-      <pre><code class="lang-js">
-        var template = {
-          title: "Marriage in NY, Zip Code: {ZIP}",
-          content: [{
-            type: "fields",
-            fieldInfos: [{
-              fieldName: "MARRIEDRATE",
-              label: "Married %",
-              visible: true
-            }]
-          }]
-        };
-        layer.popupTemplate = template;
-      </code></pre>
-    </div>
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-5.html"></iframe>
-  </div>
-</div>
+<br/>
+
+<p>Johannes Schmid</p>
 
 ---
 
@@ -1044,20 +1247,72 @@ Room 31A<br/>
 
 ### Topics
 
-- Skyscraper explorer
-- Hiking App
+
+- [Skyscraper explorer](https://esri.github.io/Manhattan-skyscraper-explorer/)
+- [Hiking App](https://ralucanicola.github.io/hiking-app/)
 - [C-Through](https://esri.github.io/c-through/)
-- [Satellite map](http://richiecarmichael.github.io/sat/index.html)
+- [Satellite map](https://richiecarmichael.github.io/sat/index.html)
 - [Landsat viewer](https://richiecarmichael.github.io/landsat-viewer/index.html)
 
 
 ---
 
+<!-- .slide: data-background="../images/bg-9.png" -->
+
+### Thank you
+
+<iframe id="scene-view-map-view" data-src="http://www.arcgis.com/home/webscene/viewer.html?webscene=49345e11fbf041dfb791b58d3baf7905&ui=min" style="width:30%;height:30%;"</iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### Please Take Our Survey on the App
+
+<img class="plain" src="./images/survey.png" background=none>
+
+
+---
+
+<!-- .slide: data-background="../images/bg-8.png" -->
+
+<img class="plain" src="../images/esri-science-logo-white.png" background=none>
+=======
+### Skyscrapper explorer
+
+<iframe id="scene-view-map-view" data-src="https://esri.github.io/Manhattan-skyscraper-explorer/"></iframe>
+
+---
+
 <!-- .slide: data-background="../images/bg-5.png" -->
 
-### Topics
+### Hiking App
 
-<iframe id="scene-view-map-view" data-src="http://devext.arcgis.com/home/webscene/viewer.html?webscene=b351d0face0742bc87e0c8e15032543c&ui=min" ></iframe>
+<iframe id="scene-view-map-view" data-src="https://ralucanicola.github.io/hiking-app/"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### C-Through
+
+<iframe id="scene-view-map-view" data-src="https://esri.github.io/c-through/"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### Satellite map
+
+<iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/sat/index.html"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### Landsat viewer
+
+<iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/landsat-viewer/index.html"></iframe>
 
 ---
 
@@ -1077,3 +1332,4 @@ Room 31A<br/>
 **ArcGIS API for JavaScript: 3D Visualization**<br/>
 Thursday, 10:00 am - 11:00 am<br/>
 Room 33C
+
