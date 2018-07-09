@@ -198,31 +198,6 @@
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Ground</b>
-
-- Elevation surface
-- Draped layers
-- NEW render just a solid color
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>Navigation</b>
-
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>Light & Shadows</b>
-
-- 
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
 ### <b>Web Scenes Concept</b>
 
 - Vehicle for cross platform 3D capabilities
@@ -230,37 +205,6 @@
 - Read and write Web Scenes across the ArcGIS platform
 
 <img class="plain" src="./images/platform-webscene.png" background=none>
-
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>Web Scenes Specification</b>
-
-- Defines the content of a Web Scene
-- Follows a specification (similar to Web Map)
-- Serialized as JSON
-- Stored in ArcGIS Online or Enterprise (Portal)
-- Operational layers (with styling overrides) 
-- Base map, slides, initial state (position and light)
-- Metadata: scene type, spatial reference, version...
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>Summary</b>
-
-- 2D and 3D data can be visualized globally and locally.
-
-- Ground represents the earth surface.
-
-- Camera is used for specific views and navigation.
-
-- 3D allows you to light up and render shadows.
-
-- 3D on the web requires latest technology.
 
 
 ---
@@ -281,21 +225,20 @@
 
 <!-- .slide: data-background="../images/bg-5.png" -->
 
-### Topics
+### Steps
 
-- Loading the webscene
-- Add a layer
-- Add a widget
+1. Loading the webscene
+1. Add a layer
+1. Add a widget
+1. Configure popups
 
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
+## Creating basic HTML file
 
-### Creating basic HTML file
-
-<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
+<div class="code-snippet" style="max-width: 600px; font-size: 130%; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="lang-html">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -342,11 +285,9 @@
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
+## Reference the ArcGIS API for JavaScript
 
-### Reference the ArcGIS API for JavaScript
-
-<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
+<div class="code-snippet" style="max-width: 600px; font-size: 130%; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -393,11 +334,9 @@
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
+## Load the module
 
-### Load the module
-
-<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
+<div class="code-snippet" style="max-width: 600px; font-size: 130%; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -448,11 +387,9 @@
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
+## Instantiate the webscene
 
-### Create the webscene
-
-<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
+<div class="code-snippet" style="max-width: 600px; font-size: 130%; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -496,17 +433,16 @@
     &lt;/body&gt;
     &lt;/html&gt;
     </code></pre>
-    </div>
+</div>
+<p class="fragment" data-fragment-index="1" style="position: absolute; top: 100px;">Here portal</p>
 
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
 
-## Loading the webscene
+## Create the view
 
-### Create the view
-
-<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
+<div class="code-snippet" style="max-width: 600px; font-size: 130%; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
