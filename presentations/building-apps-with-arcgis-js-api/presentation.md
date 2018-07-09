@@ -3,7 +3,7 @@
 
 ## Building <span style="color:#D9BA6F">3D</span> Apps <br/> with ArcGIS API for JavaScript
 
-<p>Veronika Landers - Yannik Messerli - Johannes Schmidt</p>
+<p>Veronika Landers - Yannik Messerli - Johannes Schmid</p>
 
 ---
 
@@ -35,9 +35,9 @@
 ### <b>Agenda</b>
 
 - Introduction to 3D
-- Build your app
-- Extend your app
-- Samples
+- Building your first 3D app
+- API Concepts
+- Demos
 
 ---
 
@@ -932,22 +932,12 @@ You can enable it programmatically:
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Extend your App</b>
-
-<br/>
-
-<p>Johannes Schmid</p>
-
----
-
-<!-- .slide: data-background="../images/bg-1.png" -->
-
 ## <b>API Concepts</b>
 
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
+<p>Johannes Schmid</p>
 
 ---
 
@@ -1278,7 +1268,7 @@ Room 31A<br/>
 
 <img class="plain" src="../images/esri-science-logo-white.png" background=none>
 =======
-### Skyscrapper explorer
+### Skyscraper explorer
 
 <iframe id="scene-view-map-view" data-src="https://esri.github.io/Manhattan-skyscraper-explorer/"></iframe>
 
