@@ -34,16 +34,16 @@
 <!-- .slide: data-background="../images/bg-1.png" -->
 ### <b>Agenda</b>
 
-- Introduction to 3D
-- Building your first 3D app
-- API Concepts
+- Introduction
+- Your first 3D app
+- Working with the API
 - Demos
 
 ---
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Introduction to 3D</b>
+## <b>Introduction</b>
 
 <br/>
 
@@ -211,7 +211,7 @@
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Building your first 3D App</b>
+## <b>Your first 3D App</b>
 
 <br/>
 
@@ -868,7 +868,7 @@ You can enable it programmatically:
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>API Concepts</b>
+## <b>Working with the API</b>
 
 
 <br/>
@@ -1169,6 +1169,33 @@ Room 31A<br/>
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### Related sessions
+<br/>
+
+**ArcGIS API for JavaScript: An Introduction**<br/>
+Tuesday, 4:00 pm - 5:00 pm<br/>
+Room 30E<br/>
+
+**ArcGIS API for JavaScript: Best Practices for Building Apps**<br/>
+Wednesday, 2:30 pm - 3:30 pm<br/>
+Room 31A<br/>
+
+**ArcGIS API for JavaScript: 3D Visualization**<br/>
+Thursday, 10:00 am - 11:00 am<br/>
+Room 33C
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### Please Take Our Survey on the App
+
+<img class="plain" src="./images/survey.png" background=none>
+
+---
+
 <!-- .slide: data-background="../images/bg-5.png" -->
 
 ### Topics
@@ -1179,24 +1206,6 @@ Room 31A<br/>
 - [C-Through](https://esri.github.io/c-through/)
 - [Satellite map](https://richiecarmichael.github.io/sat/index.html)
 - [Landsat viewer](https://richiecarmichael.github.io/landsat-viewer/index.html)
-
-
----
-
-<!-- .slide: data-background="../images/bg-9.png" -->
-
-### Thank you
-
-<iframe id="scene-view-map-view" data-src="http://www.arcgis.com/home/webscene/viewer.html?webscene=49345e11fbf041dfb791b58d3baf7905&ui=min" style="width:30%;height:30%;"</iframe>
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### Please Take Our Survey on the App
-
-<img class="plain" src="./images/survey.png" background=none>
-
 
 ---
 
@@ -1239,23 +1248,3 @@ Room 31A<br/>
 ### Landsat viewer
 
 <iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/landsat-viewer/index.html"></iframe>
-
----
-
-<!-- .slide: data-background="../images/bg-4.png" -->
-
-### Related sessions
-<br/>
-
-**ArcGIS API for JavaScript: An Introduction**<br/>
-Tuesday, 4:00 pm - 5:00 pm<br/>
-Room 30E<br/>
-
-**ArcGIS API for JavaScript: Best Practices for Building Apps**<br/>
-Wednesday, 2:30 pm - 3:30 pm<br/>
-Room 31A<br/>
-
-**ArcGIS API for JavaScript: 3D Visualization**<br/>
-Thursday, 10:00 am - 11:00 am<br/>
-Room 33C
-
