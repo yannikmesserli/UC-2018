@@ -267,11 +267,11 @@
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Building your first App</b>
+## <b>Building your first 3D App</b>
 
 <br/>
 
-<div style="margin-top: -70px; font-size: 80%; font-style: italic;">with ArcGIS API for JavaScript</div>
+<div style="margin-top: -70px; font-size: 80%; font-style: italic;">with the ArcGIS API for JavaScript</div>
 
 <br/>
 
@@ -964,7 +964,7 @@ You can enable it programmatically:
 
 <br/>
 
-<p>Veronika Landers - Johannes Schmidt - Yannik Messerli</p>
+<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
 
 ---
 
@@ -972,7 +972,8 @@ You can enable it programmatically:
 
 ### Topics
 
-- [Skyscrapper explorer](https://esri.github.io/Manhattan-skyscraper-explorer/)
+
+- [Skyscraper explorer](https://esri.github.io/Manhattan-skyscraper-explorer/)
 - [Hiking App](https://ralucanicola.github.io/hiking-app/)
 - [C-Through](https://esri.github.io/c-through/)
 - [Satellite map](https://richiecarmichael.github.io/sat/index.html)
