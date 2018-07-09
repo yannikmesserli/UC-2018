@@ -295,9 +295,7 @@
 
 ### Creating basic HTML file
 
-<div class="two-columns">
-  <div class="left-column">
-    <div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="lang-html">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -340,12 +338,6 @@
     </div>
 
 
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -354,10 +346,7 @@
 
 ### Reference the ArcGIS API for JavaScript
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -400,12 +389,6 @@
     </div>
 
 
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -414,10 +397,7 @@
 
 ### Load the module
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -463,12 +443,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
 
 ---
 
@@ -478,10 +452,7 @@
 
 ### Create the webscene
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -527,13 +498,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
-
 ---
 
 <!-- .slide: data-background="../images/bg-6.png" -->
@@ -542,10 +506,7 @@
 
 ### Create the view
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet">
+<div class="code-snippet" style="max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -30px;" class="grey">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -582,7 +543,7 @@
             map: scene
           });
     </code>
-    <code style="margin-bottom: -30px;" class="grey">
+    <code class="grey">
         });
       &lt;/script&gt;
       &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;
@@ -591,12 +552,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view"></iframe>
-  </div>
-</div>
 
 ---
 
@@ -664,7 +619,7 @@
 
 ## Details about the `Webscene` class
 
-- `Layers`, `Slides`, ...
+- `Layers`, `Presentation`, ...
 - `Basemap` is exactly the same concept as in 2D
 - `Ground` defines the ground surface of the scene
 
@@ -676,17 +631,17 @@
 
 | Layer type   | Characteristics | |
 |--------------|-----------------|-|
-| `FeatureLayer` | vector | <small>2d & 3D</small> |
-| `CSVLayer` | vector | <small>2d & 3D</small> |
-| `StreamLayer` | vector | <small>2d & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2d & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2d & 3D</small> |
-| `WMSLayer` | dynamic | <small>2d & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2d & 3D</small> |
-| `TileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2d & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2d & 3D</small> |
+| `FeatureLayer` | vector | <small>2D & 3D</small> |
+| `CSVLayer` | vector | <small>2D & 3D</small> |
+| `StreamLayer` | vector | <small>2D & 3D</small> |
+| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
+| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
+| `WMSLayer` | dynamic | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
+| `TileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
+| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
 | `ElevationLayer` | raster, cached | <small> 3D only</small> |
 | `SceneLayer` | vector | <small> 3D only</small> |
 | `IntegratedMeshLayer` | vector | <small> 3D only</small> |
@@ -700,19 +655,19 @@
 
 | Layer type   | Characteristics | |
 |--------------|-----------------|-|
-| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`FeatureLayer`</div> | vector | <small>2d & 3D</small> |
-| `CSVLayer` | vector | <small>2d & 3D</small> |
-| `StreamLayer` | vector | <small>2d & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2d & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2d & 3D</small> |
-| `WMSLayer` | dynamic | <small>2d & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2d & 3D</small> |
-| `TileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2d & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2d & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2d & 3D</small> |
+| `FeatureLayer` | vector | <small>2D & 3D</small> |
+| `CSVLayer` | vector | <small>2D & 3D</small> |
+| `StreamLayer` | vector | <small>2D & 3D</small> |
+| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
+| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
+| `WMSLayer` | dynamic | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
+| `TileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
+| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
+| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
 | `ElevationLayer` | raster, cached | <small> 3D only</small> |
-| `SceneLayer` | vector | <small> 3D only</small> |
+| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`SceneLayer`</div> | vector | <small> 3D only</small> |
 | `IntegratedMeshLayer` | vector | <small> 3D only</small> |
 | `PointCloudLayer` | vector | <small> 3D only</small> |
 
@@ -722,23 +677,20 @@
 
 ## Adding a layer
 
-<div class="two-columns">
-  <div class="left-column">
-
-<div class="code-snippet" style="font-size: 140%;">
+<div class="code-snippet" style="font-size: 140%; max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -40px;" class="grey">
         require([
           "esri/WebScene",
           "esri/views/SceneView",
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          "esri/layers/FeatureLayer",
+          "esri/layers/SceneLayer",
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           "dojo/domReady!"
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-        ], function(WebScene, SceneView, FeatureLayer) {
+        ], function(WebScene, SceneView, SceneLayer) {
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           var scene = new WebScene({
@@ -752,24 +704,18 @@
           });
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          var layer = new FeatureLayer({
+          var layer = new SceneLayer({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "2e0761b9a4274b8db52c4bf34356911e"
             }
           });
           scene.add(layer);
     </code>
     <code class="grey">
+          // Go to layer..
         });
     </code></pre>
     </div>
-
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" ></iframe>
-  </div>
-</div>
 
 ---
 
@@ -785,9 +731,9 @@
         require([
           "esri/WebScene",
           "esri/views/SceneView",
-          "esri/layers/FeatureLayer",
+          "esri/layers/SceneLayer",
           "dojo/domReady!"
-        ], function(WebScene, SceneView, FeatureLayer) {
+        ], function(WebScene, SceneView, SceneLayer) {
           var scene = new WebScene({
             portalItem: {
               id: "3a9976baef9240ab8645ee25c7e9c096"
@@ -797,12 +743,13 @@
             container: "viewDiv",
             map: scene
           });
-          var layer = new FeatureLayer({
+          var layer = new SceneLayer({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "2e0761b9a4274b8db52c4bf34356911e"
             }
           });
           scene.add(layer);
+          // Go to layer...
         });
     </code></pre>
     </div>
@@ -835,10 +782,8 @@
 
 ## Adding a widget
 
-<div class="two-columns">
-  <div class="left-column">
 
-<div class="code-snippet" style="font-size: 140%;">
+<div class="code-snippet" style="font-size: 140%;max-width: 600px; float: none; margin: auto;">
     <pre><code style="margin-bottom: -40px;" class="grey">
         require([
           "esri/WebScene",
@@ -861,7 +806,7 @@
     </code>
     <code style="margin-bottom: -40px;" class="grey">
 
-          ...
+          // ...
 
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
@@ -877,12 +822,6 @@
     </code></pre>
     </div>
 
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" ></iframe>
-  </div>
-</div>
 
 ---
 
@@ -908,7 +847,7 @@
           Search
         ) {
 
-          ...
+          // ...
 
           var searchWidget = new Search({
             view: view
@@ -935,7 +874,28 @@
 
 <div class="two-columns">
   <div class="left-column">
-      The popup widget allows users to view content from the feature attributes. 
+The popup widget allows users to view content from the feature attributes. 
+
+
+<br><br>
+<div>
+You can enable it programmatically:
+</div>
+      <div class="code-snippet" style="font-size: 120%;margin-top: 50px;">
+        <pre><code class="lang-js">
+  view.on("click", function(event) {
+    event.stopPropagation();
+    view.popup.open({
+      title: "Reverse geocode: [" 
+        + event.mapPoint.longitude 
+        + ", " + event.mapPoint.latitude 
+        + "]",
+      location: event.mapPoint
+    });
+  });
+        </code></pre>
+      </div>
+
   </div>
   <div class="right-column">
     <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-3.html"></iframe>
@@ -946,59 +906,25 @@
 
 <!-- .slide: data-background="../images/bg-7.png" -->
 
-## Intro to popup
+## Popup templates
 
 <div class="two-columns">
   <div class="left-column">
-
-<div class="code-snippet" style="font-size: 140%;">
-    <pre><code class="lang-js">
-      view.on("click", function(event) {
-        event.stopPropagation();
-        view.popup.open({
-          title: "Reverse geocode: [" + lon + ", " + lat + "]",
-          location: event.mapPoint
-        });
-      });
-    </code></pre>
-    </div>
-
-
-  </div>
-  <div class="right-column">
-    <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-4.html"></iframe>
-  </div>
-</div>
-
----
-
-<!-- .slide: data-background="../images/bg-7.png" -->
-
-## Adding a popup template for your attributes
-
-<div class="two-columns">
-  <div class="left-column">
-    - Each view has a popup associated with it
-    - You can custom the popup display using the `PopupTemplate`
-    <div class="code-snippet" style="font-size: 140%;">
+    Display attribute using the `PopupTemplate`
+    <div class="code-snippet" style="font-size: 130%;">
       <pre><code class="lang-js">
-        var template = {
-          title: "Marriage in NY, Zip Code: {ZIP}",
-          content: [{
-            type: "fields",
-            fieldInfos: [{
-              fieldName: "MARRIEDRATE",
-              label: "Married %",
-              visible: true
-            }]
-          }]
-        };
-        layer.popupTemplate = template;
+  var template = {
+    title: "Building <b>{NAME}</b>",
+    content: "This build has <b>{NUM_FLOORS}</b> floors," 
+      + " for a height of <b>{HEIGHTROOF}</b> ft.<br/>"
+      + "It has been built in <b>{CNSTRCT_YR}.</b>"
+  };
+  layer.popupTemplate = template;
       </code></pre>
     </div>
   </div>
   <div class="right-column">
-    <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-5.html"></iframe>
+    <iframe id="scene-view-map-view" data-src="./snippets/setup-snippet-4.html"></iframe>
   </div>
 </div>
 
@@ -1046,10 +972,10 @@
 
 ### Topics
 
-- Skyscrapper explorer
-- Hiking App
+- [Skyscrapper explorer](https://esri.github.io/Manhattan-skyscraper-explorer/)
+- [Hiking App](https://ralucanicola.github.io/hiking-app/)
 - [C-Through](https://esri.github.io/c-through/)
-- [Satellite map](http://richiecarmichael.github.io/sat/index.html)
+- [Satellite map](https://richiecarmichael.github.io/sat/index.html)
 - [Landsat viewer](https://richiecarmichael.github.io/landsat-viewer/index.html)
 
 
@@ -1075,4 +1001,39 @@
 <!-- .slide: data-background="../images/bg-8.png" -->
 
 <img class="plain" src="../images/esri-science-logo-white.png" background=none>
+=======
+### Skyscrapper explorer
 
+<iframe id="scene-view-map-view" data-src="https://esri.github.io/Manhattan-skyscraper-explorer/"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### Hiking App
+
+<iframe id="scene-view-map-view" data-src="https://ralucanicola.github.io/hiking-app/"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### C-Through
+
+<iframe id="scene-view-map-view" data-src="https://esri.github.io/c-through/"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### Satellite map
+
+<iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/sat/index.html"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+### Landsat viewer
+
+<iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/landsat-viewer/index.html"></iframe>

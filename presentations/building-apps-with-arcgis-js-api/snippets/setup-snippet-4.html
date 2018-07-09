@@ -22,7 +22,12 @@ function snippet(containers, interlinks) {
       }
     });
     var layer = new SceneLayer({
-      url: "https://tiles.arcgis.com/tiles/cFEFS0EWrhfDeVw9/arcgis/rest/services/Buildings_Manhattan/SceneServer"
+      url: "https://tiles.arcgis.com/tiles/cFEFS0EWrhfDeVw9/arcgis/rest/services/Buildings_Manhattan/SceneServer",
+      popupTemplate: {
+        title: "Building <b>{NAME}</b>",
+        content: "This build has <b>{NUM_FLOORS}</b> floors, for a height of <b>{HEIGHTROOF}</b>ft.<br/>"
+          + "It has been built in <b>{CNSTRCT_YR}</b>"
+      }
     });
     scene.add(layer);
     var searchWidget = new Search({
@@ -30,19 +35,6 @@ function snippet(containers, interlinks) {
     });
     view.ui.add(searchWidget, {
       position: "top-right"
-    });
-    var num = 0;
-    view.on("click", function(event) {
-      if (num % 2 === 1) {
-        event.stopPropagation();  
-      }
-      num++;
-      var lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
-      var lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
-      view.popup.open({
-        title: "Reverse geocode: [" + lon + ", " + lat + "]",
-        location: event.mapPoint
-      });
     });
   });
 }

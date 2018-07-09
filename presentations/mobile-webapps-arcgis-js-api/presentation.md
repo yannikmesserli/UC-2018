@@ -46,9 +46,10 @@
    - Browser Vendor
 
 - And depends heavily on
-   - The number of features and their symbology
-   - The environement 
-   - The rendering quality
+   - Number of layers in your scene
+   - Number of features and their symbology
+   - Environement settings
+   - Rendering quality
 
 
 ---
@@ -94,7 +95,7 @@ Complex visualisation will decrease performance.
     </code></pre>
   </div>
   <div class="snippet-preview">
-    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="transform: scale(0.33);"></iframe>
   </div>
 </div>
 
@@ -115,7 +116,7 @@ Shadow is costly to render.
     </code></pre>
   </div>
   <div class="snippet-preview">
-    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="transform: scale(0.33);"></iframe>
   </div>
 </div>
 
@@ -136,7 +137,7 @@ High rendering settings decrease performance.
     </code></pre>
   </div>
   <div class="snippet-preview">
-    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="zoom: 33%"></iframe>
+    <iframe id="frame-performance-view" data-src="./snippets/setup-performance-view.html" style="transform: scale(0.33);"></iframe>
   </div>
 </div>
 
@@ -151,10 +152,6 @@ High rendering settings decrease performance.
 
 [Google documentation](https://developers.google.com/web/progressive-web-apps/)
 
-Topics:
-
-- Service workers
-- App manifest
 
 ---
 
@@ -163,7 +160,7 @@ Topics:
 ### Service Workers
 #### Definition
 
-Service workers are Javascript scripts run by modern browsers to handle slow or intermittent network connectivity. They sit between your applications, the browser, and the network and take appropriate actions based on whether the network is available or the resource is cached.
+<div style="max-width: 900px; font-weight: lighter; margin: auto; padding: 30px; background: rgba(0,0,0,0.5)">Service workers are Javascript scripts run by modern browsers to handle slow or intermittent network connectivity. They sit between your applications, the browser, and the network and take appropriate actions based on whether the network is available or the resource is cached.</div>
 
 [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
@@ -171,44 +168,67 @@ Service workers are Javascript scripts run by modern browsers to handle slow or 
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### Progessive Web Apps
-#### Service Workers
+### Service Workers
 
-<pre><code class="lang-js hljs javascript">
-// index.html
+<div class="twos">
+  <div>
+    <pre style="font-size: 90%;"><code class="lang-js hljs javascript">
+    // service-worker.js
 
-if ('serviceWorker' in navigator) {
-
-  navigator.serviceWorker.register('./service-worker.js', { scope: './' })
-    .then(function() {
-
-      if (navigator.serviceWorker.controller) {
-
-        // Service Worker is active
-
-      }
-      else {
-
-        // Service Worker is installed but inactive
-
-      }
-
-    })
-    .catch(function(error) {
-
-      // An error occurred during Service Worker creation
-
+    self.addEventListener('install', event => {
+      event.waitUntil(
+        caches.open("your_cache")
+          .then((cache) => { 
+            // Cache the files you need offline
+          }));
+      );
     });
 
-}
-else {
+    self.addEventListener('fetch', function(event) {
+      event.respondWith(
+        // Magic goes here
+      );
+    });
 
-  // The current browser doesn't support service workers
+    </code></pre>
+  </div>
+  <div>
+    <pre><code class="lang-js hljs javascript">
+    // index.html
 
-}
+    if ('serviceWorker' in navigator) {
 
-</code></pre>
+      navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+        .then(function() {
 
+          if (navigator.serviceWorker.controller) {
+
+            // Service Worker is active
+
+          }
+          else {
+
+            // Service Worker is installed but inactive
+
+          }
+
+        })
+        .catch(function(error) {
+
+          // An error occurred during Service Worker creation
+
+        });
+
+    }
+    else {
+
+      // The current browser doesn't support service workers
+
+    }
+
+    </code></pre>
+  </div>
+</div>
 
 ---
 
@@ -217,7 +237,7 @@ else {
 ### Progessive Web Apps
 #### Web App Manifest
 
-<pre><code class="lang-js hljs javascript">
+<pre style="max-width: 500px; margin: auto;"><code class="lang-js hljs javascript">
 // index.html
 
 <link rel='manifest' href='./manifest.json'>
@@ -262,7 +282,7 @@ else {
   width: 920px;
   height: 285px;
 
-  background-image: url(./images/esri-science-logo-white.png);
+  background-image: url(../images/esri-science-logo-white.png);
   background-size: auto 285px;
   background-blend-mode: lighten;
   background-repeat: no-repeat;
