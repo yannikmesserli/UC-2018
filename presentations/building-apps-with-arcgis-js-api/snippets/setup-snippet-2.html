@@ -3,9 +3,9 @@ function snippet(containers, interlinks) {
   require([
     "esri/WebScene",
     "esri/views/SceneView",
-    "esri/layers/FeatureLayer",
+    "esri/layers/SceneLayer",
     "dojo/domReady!"
-  ], function(WebScene, SceneView, FeatureLayer) {
+  ], function(WebScene, SceneView, SceneLayer) {
     var scene = new WebScene({
       portalItem: {
         id: "3a9976baef9240ab8645ee25c7e9c096"
@@ -15,17 +15,20 @@ function snippet(containers, interlinks) {
       container: "viewDiv",
       map: scene
     });
-    var layer = new FeatureLayer({
-      url: "//sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0"
+    var layer = new SceneLayer({
+      portalItem: {
+        id: "2e0761b9a4274b8db52c4bf34356911e"
+      }
     });
     scene.add(layer);
     
     setTimeout(function(){
       scene.when(function(){
-        return layer.queryExtent();
-      })
-      .then(function(response){
-        view.goTo(response.extent);
+        view.goTo({
+          position: [-74.0338, 40.6913, 707],
+          tilt: 81,
+          heading: 50
+        });
       });
     }, 3000);
   });
