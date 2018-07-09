@@ -14,7 +14,7 @@
 
 <!-- .slide: data-background="../images/bg-5.png" -->
 
-# It's ready already!
+# It's ready!
 
 [Test it](http://www.arcgis.com/home/webscene/viewer.html)
 
