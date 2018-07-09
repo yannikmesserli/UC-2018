@@ -942,15 +942,290 @@ You can enable it programmatically:
 
 <!-- .slide: data-background="../images/bg-1.png" -->
 
-## <b>And much more...</b> 
+## <b>API Concepts</b>
+
 
 <br/>
 
-<div style="margin-top: -70px; font-size: 80%; font-style: italic;">Checkout the documentation at [https://developers.arcgis.com/javascript/](https://developers.arcgis.com/javascript/)</div>
+<p>Veronika Landers - Johannes Schmid - Yannik Messerli</p>
 
+---
+
+## Architecture
+
+
+<img src="../images/concepts-architecture.png" width="800" style="border: none; background: none; box-shadow: none"/>
+
+---
+
+## Working with the [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html)
+
+<div class="code-snippet" style="font-size: 160%;">
+  <pre><code class="lang-ts">
+class SceneView {
+  // Camera specifies the view
+  camera: Camera;
+
+  // Animations, framing
+  goTo(...);
+
+  // Finding graphics at screen locations
+  hitTest(...);
+
+  // Converting coordinate systems
+  toScreen(mapPoint: Point): ScreenPoint;
+  toMap(screenPoint: ScreenPoint): Point;
+}
+  </code></pre>
+</div>
+
+---
+
+## [Camera](https://developers.arcgis.com/javascript/latest/api-reference/esri-Camera.html)
+
+- Primary specification of the view is the [`Camera`](https://developers.arcgis.com/javascript/beta/api-reference/esri-Camera.html)
+
+
+<div class="code-snippet" style="font-size: 160%;">
+  <pre><code class="lang-ts">
+class Camera {
+  // The position of the camera eye in 3D space (x, y + z elevation)
+  position: Point;
+
+  // The heading angle (towards north in degrees, [0, 360]°)
+  heading: number;
+
+  // The tilt angle ([0, 180]°, with 0° straight down, 90° horizontal)
+  tilt: number;
+}
+  </code></pre>
+</div>
+
+---
+
+## [Camera](https://developers.arcgis.com/javascript/latest/api-reference/esri-Camera.html)
+
+<div class="two-columns">
+  <div class="left-column">
+
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="scene-view-camera-button01"></button>
+<pre><code class="lang-ts">const camera = view.camera.clone();
+
+// Increment the heading of the camera by 5 degrees
+camera.heading += 5;
+
+// Set the modified camera on the view
+view.camera = camera;</code></pre>
+</div>
+
+
+  </div>
+  <div class="right-column">
+    <iframe id="camera-demo" data-src="./snippets/concepts-camera.html" ></iframe>
+  </div>
+</div>
+
+---
+
+## [goTo](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#goTo)
+
+<div class="two-columns">
+  <div class="left-column">
+
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="scene-view-go-to-button01"></button>
+<pre><code class="lang-ts">// target heading = current heading + 30
+var newHeading = view.camera.heading + 30;
+
+// go to heading preserves view.center
+view.goTo({
+    heading: newHeading
+});</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="scene-view-go-to-button02"></button>
+<pre><code class="lang-ts">// coordinates (lon, lat) of Mount Fuji
+var newCenter = [138.729050, 35.360638];
+
+view.goTo({
+   center: newCenter,
+   zoom: 13
+});</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="go-to-demo" data-src="./snippets/concepts-goTo.html" ></iframe>
+  </div>
+</div>
+
+---
+
+## [toMap](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#toMap)
+
+<div class="two-columns">
+  <div class="left-column">
+
+<div class="code-snippet small" style="font-size: 160%;">
+<pre><code class="lang-js">// Every time the user clicks on the map...
+view.on("click", function(event) {
+
+  // convert the screen position to map coordinates
+  var position = view.toMap(event.x, event.y);
+  
+  // add a cone symbol at that location
+  view.graphics.add(new Graphic({
+    geometry: position,
+    symbol: coneSymbol
+  });
+});</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="to-map-to-screen-demo" data-src="./snippets/concepts-toMap.html" ></iframe>
+  </div>
+</div>
+
+---
+
+## Working with layers
+
+<div class="code-snippet" style="font-size: 160%;">
+  <pre><code class="lang-ts">
+class SceneLayer {
+  // Renderer assigns each feature a color and style
+  renderer: Renderer;
+
+  // Filtering 
+  definitionExpression: string;
+
+  // Querying
+  queryFeatures(params: Query): FeatureSet;
+  queryExtent(params: Query): Extent;
+  ...
+}
+  </code></pre>
+</div>
+
+---
+
+## Filtering
+
+<div class="two-columns">
+  <div class="left-column">
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="mesh-filtering-button01"></button>
+<pre><code class="lang-js">// only show buildings constructed before 1900
+sceneLayer.definitionExpression =
+  "CNSTRCT_YR < 1900 AND CNSTRCT_YR > 0";
+</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="mesh-filtering-button03"></button>
+<pre><code class="lang-js">// reset filter
+sceneLayer.definitionExpression = null;
+</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 160%;">
+<button class="play" id="mesh-filtering-button02"></button>
+<pre><code class="lang-js">// only show tall buildings
+sceneLayer.definitionExpression =
+  "HEIGHTROOF > 300";
+</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="scene-layer-mesh2" data-src="./snippets/concepts-definitionExpression.html" ></iframe>
+  </div>
+</div>
+
+---
+
+## Assigning a renderer
+
+<div class="two-columns">
+  <div class="left-column">
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="mesh-renderer-button01"></button>
+<pre><code class="lang-js">// draw buildings in transparent green
+sceneLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "mesh-3d",
+    symbolLayers: [{
+      type: "fill",
+      material: {
+        color: [144, 238, 144, 0.3]
+      }
+    }]
+  }
+};
+</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="mesh-renderer-button02"></button>
+<pre><code class="lang-js">// color buildings by construction year
+sceneLayer.renderer = {
+ type: "simple",
+ visualVariables: [{
+   type: "color",
+   field: "CNSTRCT_YR",
+   stops: [{
+       value: 1867,
+       color: [69, 83, 122]
+     },
+     ...
+   ]
+ }]
+};
+</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="scene-layer-mesh2" data-src="./snippets/concepts-renderer.html" ></iframe>
+  </div>
+</div>
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### ArcGIS API for JavaScript: 3D Visualization
+Thursday, 10:00 am - 11:00 am<br/>
+Room 33C
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### There is so much more...
+
+[https://developers.arcgis.com/javascript/](https://developers.arcgis.com/javascript/)
+
+<img src="../images/api-doc.png" height="500"/>
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+<h3>ArcGIS API for JavaScript: An Introduction</h3>
+Tuesday, 4:00 pm - 5:00 pm<br/>
+Room 30E<br/>
+<br/>
 <br/>
 
-<p>It's only the beginning...</p>
+<h3 class="fragment" data-fragment-index="1">ArcGIS API for JavaScript: Best Practices for Building Apps</h3>
+<span class="fragment" data-fragment-index="1">Wednesday, 2:30 pm - 3:30 pm<br/>
+Room 31A<br/>
+</span>
 
 ---
 
@@ -1038,3 +1313,23 @@ You can enable it programmatically:
 ### Landsat viewer
 
 <iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/landsat-viewer/index.html"></iframe>
+
+---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### Related sessions
+<br/>
+
+**ArcGIS API for JavaScript: An Introduction**<br/>
+Tuesday, 4:00 pm - 5:00 pm<br/>
+Room 30E<br/>
+
+**ArcGIS API for JavaScript: Best Practices for Building Apps**<br/>
+Wednesday, 2:30 pm - 3:30 pm<br/>
+Room 31A<br/>
+
+**ArcGIS API for JavaScript: 3D Visualization**<br/>
+Thursday, 10:00 am - 11:00 am<br/>
+Room 33C
+
