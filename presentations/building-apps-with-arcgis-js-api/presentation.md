@@ -904,9 +904,14 @@ Open it programmatically:
 ---
 
 ## Architecture
+<br/>
+<img src="../images/concepts-architecture2.png" width="60%" style="border: none; background: none; box-shadow: none"/>
 
+---
 
-<img src="../images/concepts-architecture.png" width="800" style="border: none; background: none; box-shadow: none"/>
+## Architecture
+<br/>
+<img src="../images/concepts-architecture3.png" width="60%" style="border: none; background: none; box-shadow: none"/>
 
 ---
 
@@ -1048,11 +1053,11 @@ view.on("click", function(event) {
 <div class="code-snippet" style="font-size: 160%;">
   <pre><code class="lang-ts">
 class SceneLayer {
-  // Renderer assigns each feature a color and style
-  renderer: Renderer;
-
   // Filtering 
   definitionExpression: string;
+
+  // Renderer assigns each feature a color and style
+  renderer: Renderer;
 
   // Querying
   queryFeatures(params: Query): FeatureSet;
@@ -1099,7 +1104,7 @@ sceneLayer.definitionExpression =
 
 ---
 
-## Assigning a renderer
+## Setting layer style
 
 <div class="two-columns">
   <div class="left-column">
