@@ -13,37 +13,27 @@
 
 <br/>
 
-<img class="plain" src="./images/3d-gis-industries.png" height=550 background=none>
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b> <span style="color:#D9BA6F">3D</span> GIS across industries</b>
-
-<br/>
-
-<div class="box" style="display:inline-block; width:500px">
-<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=c5b58fa63714412eb0eea933a130ebdf&ui=min" height=500 align=left></iframe></div>
-
-<div class="box" style="display:inline-block; width:500px">
-<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=43e1b988e55a44fdad6c5cf58c34dbda&ui=min" height=500></iframe></div>
+<div class="box" style="display:inline-block; width:650px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=c5b58fa63714412eb0eea933a130ebdf&ui=min" align=left></iframe></div>
+<div class="box" style="display:inline-block; width:50px"></div>
+<div class="box" style="display:inline-block; width:650px">
+<iframe id="scene-view-map-view" data-src="https://www.arcgis.com/home/webscene/viewer.html?webscene=43e1b988e55a44fdad6c5cf58c34dbda&ui=min"></iframe></div>
 
 ---
 
 <!-- .slide: data-background="../images/bg-1.png" -->
 ### <b>Agenda</b>
 
-- Introduction to 3D
-- Building your first 3D app
-- API Concepts
+- Introduction
+- Your first 3D app
+- Working with the API
 - Demos
 
 ---
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Introduction to 3D</b>
+## <b>Introduction</b>
 
 <br/>
 
@@ -97,7 +87,7 @@
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
-### <b>ArcGIS JavaScript API</b>
+### <b>ArcGIS API for JavaScript</b>
 
 <br/>
 <img class="plain" src="./images/js-doc.png" height=500 background=none>
@@ -105,9 +95,9 @@
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
-### <b>ArcGIS JavaScript API</b>
+### <b>ArcGIS API for JavaScript </b>
 
-  - Visual mapping (2D & 3D), component and widgets
+  - Visual mapping (2D & 3D), components and widgets
   - Support for various different layer types (data sources)
   - Integration with the ArcGIS platform
     <br/>(security, sign-in, premium services, …)
@@ -115,8 +105,8 @@
 <br/>
 
 <b><span style="color:#D9BA6F">Get it today</span></b>
-- Hosted build https://js.arcgis.com/4.8   
-- Doc/samples https://developers.arcgis.com/javascript
+
+Find doc & samples to get started at https://developers.arcgis.com/javascript
 
 ---
 
@@ -143,33 +133,19 @@
 
 <br/>
 
-- Mobile support for the following devices
+- Mobile support introduced this year!
+- Officially supported for the following devices
   - iOS — iPhone 8, iPad Pro (Safari)
   - Android — Samsung S8/S9 (Chrome)
   - Android - Samsung Tab S3 (Chrome)
 
 - Other devices *only at your own risk* :)
 
-
 ---
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Provide content for your apps (1)</b>
-
-1. Process data
-
-2. Publish data as individual layers or a web scene
-
-3. Configure and schedule cache generation
-
-4. Integrate and configure layers for multiple usage on the web
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### <b>Provide content for your apps (2)</b>
+### <b>Content for your apps</b>
 
 <img class="plain" src="./images/publish.png" height=600 background=none>
 
@@ -177,22 +153,71 @@
 
 <!-- .slide: data-background="../images/bg-2.png" -->
 
-### <b>Global and local scenes</b>
+### <b>Publish a layer in ArcGIS Pro</b>
 
-- Cached data for faster rendering with dynamic data on the fly
+<img class="plain" src="./images/publish-pro-layer.png" height=700 background=none>
 
-- Global scenes for *full globe visualizations*
-  
-  Choose one of two geographic coordinate systems
-  - WebMercator (wkid: 3857)
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Publish a web scene in ArcGIS Pro</b>
+
+<img class="plain" src="./images/publish-pro.png" height=700 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Coordinate System Support for Scenes</b>
+
+- Each scene has its coordinate system defined.
+- Cached data needs to be provided in the defined system.
+- Feature and dynamic data is projected on the fly.
+- Coordinate systems define the type of scenes and its capabilities.
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Global scenes</b>
+
+Visualize data on a full globe
+
+<img class="plain" src="./images/globalscene.png" height=500 background=none>
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Global scenes</b>
+
+Choose one of two geographic coordinate systems
+  - WebMercator (wkid: 3857) - ideal to use Esri provided cached data
   - WGS84 (wkid: 4326)
 
-- Local scenes for *local cartesian visualizations*
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Local scenes</b>
+
+Visualize data in a local planar way
   
-  Choose any projected coordinate system
+<img class="plain" src="./images/localscene.png" height=500 background=none>
 
-  Clip to your area of interest
 
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### <b>Local scenes</b>
+
+Choose one of the following options
+- WebMercator (wkid: 3857)
+- any projected coordinate system
+
+Clip to your area of interest
 
 ---
 
@@ -211,7 +236,7 @@
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>Building your first 3D App</b>
+## <b>Your first 3D App</b>
 
 <br/>
 
@@ -869,7 +894,7 @@ Open it programmatically:
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## <b>API Concepts</b>
+## <b>Working with the API</b>
 
 
 <br/>
@@ -1170,6 +1195,33 @@ Room 31A<br/>
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### Related sessions
+<br/>
+
+**ArcGIS API for JavaScript: An Introduction**<br/>
+Tuesday, 4:00 pm - 5:00 pm<br/>
+Room 30E<br/>
+
+**ArcGIS API for JavaScript: Best Practices for Building Apps**<br/>
+Wednesday, 2:30 pm - 3:30 pm<br/>
+Room 31A<br/>
+
+**ArcGIS API for JavaScript: 3D Visualization**<br/>
+Thursday, 10:00 am - 11:00 am<br/>
+Room 33C
+
+---
+
+<!-- .slide: data-background="../images/bg-2.png" -->
+
+### Please Take Our Survey on the App
+
+<img class="plain" src="./images/survey.png" background=none>
+
+---
+
 <!-- .slide: data-background="../images/bg-5.png" -->
 
 ### Topics
@@ -1180,24 +1232,6 @@ Room 31A<br/>
 - [C-Through](https://esri.github.io/c-through/)
 - [Satellite map](https://richiecarmichael.github.io/sat/index.html)
 - [Landsat viewer](https://richiecarmichael.github.io/landsat-viewer/index.html)
-
-
----
-
-<!-- .slide: data-background="../images/bg-9.png" -->
-
-### Thank you
-
-<iframe id="scene-view-map-view" data-src="http://www.arcgis.com/home/webscene/viewer.html?webscene=49345e11fbf041dfb791b58d3baf7905&ui=min" style="width:30%;height:30%;"</iframe>
-
----
-
-<!-- .slide: data-background="../images/bg-2.png" -->
-
-### Please Take Our Survey on the App
-
-<img class="plain" src="./images/survey.png" background=none>
-
 
 ---
 
@@ -1240,23 +1274,3 @@ Room 31A<br/>
 ### Landsat viewer
 
 <iframe id="scene-view-map-view" data-src="https://richiecarmichael.github.io/landsat-viewer/index.html"></iframe>
-
----
-
-<!-- .slide: data-background="../images/bg-4.png" -->
-
-### Related sessions
-<br/>
-
-**ArcGIS API for JavaScript: An Introduction**<br/>
-Tuesday, 4:00 pm - 5:00 pm<br/>
-Room 30E<br/>
-
-**ArcGIS API for JavaScript: Best Practices for Building Apps**<br/>
-Wednesday, 2:30 pm - 3:30 pm<br/>
-Room 31A<br/>
-
-**ArcGIS API for JavaScript: 3D Visualization**<br/>
-Thursday, 10:00 am - 11:00 am<br/>
-Room 33C
-
