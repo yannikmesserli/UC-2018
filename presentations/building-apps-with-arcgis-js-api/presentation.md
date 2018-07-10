@@ -246,8 +246,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="lang-html">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -263,7 +263,7 @@
         ], function(WebScene, SceneView) {
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
@@ -295,8 +295,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="lang-html">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -312,7 +312,7 @@
         ], function(WebScene, SceneView) {
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
@@ -344,8 +344,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -363,7 +363,7 @@
     <code style="margin-bottom: -30px;" class="grey">
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
@@ -397,8 +397,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -416,7 +416,7 @@
     <code style="margin-bottom: -30px;" class="lang-js">
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
     </code>
@@ -434,7 +434,9 @@
     &lt;/html&gt;
     </code></pre>
 </div>
-<p class="fragment" data-fragment-index="1" style="position: absolute; top: 100px;">Here portal</p>
+<p class="fragment" data-fragment-index="1" style="position: absolute; top: 100px; max-width: 800px; margin-left: -50%; left: 75%;">
+  <img src="./images/portalitem.png" alt="">
+</p>
 
 ---
 
@@ -450,8 +452,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="grey">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -469,7 +471,7 @@
     <code style="margin-bottom: -30px;" class="grey">
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
     </code>
@@ -506,8 +508,8 @@
       &lt;meta charset=&quot;utf-8&quot;&gt;
     </code>
     <code style="margin-bottom: -30px;" class="lang-html">
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;//jsdev.arcgis.com/4.8/esri/css/main.css&quot;&gt;
-      &lt;script src=&quot;//jsdev.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;//js.arcgis.com/4.8/esri/css/main.css&quot;&gt;
+      &lt;script src=&quot;//js.arcgis.com/4.8/&quot;&gt;&lt;/script&gt;
     </code>
     <code style="margin-bottom: -30px;" class="lang-html">
       &lt;title&gt;Create a 3D map&lt;/title&gt;
@@ -523,7 +525,7 @@
         ], function(WebScene, SceneView) {
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
@@ -563,23 +565,23 @@
 
 ## Layers
 
-| Layer type   | Characteristics | |
-|--------------|-----------------|-|
-| `FeatureLayer` | vector | <small>2D & 3D</small> |
-| `CSVLayer` | vector | <small>2D & 3D</small> |
-| `StreamLayer` | vector | <small>2D & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
-| `WMSLayer` | dynamic | <small>2D & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
-| `TileLayer` | raster, cached | <small>2D & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
-| `ElevationLayer` | raster, cached | <small> 3D only</small> |
-| `SceneLayer` | vector | <small> 3D only</small> |
-| `IntegratedMeshLayer` | vector | <small> 3D only</small> |
-| `PointCloudLayer` | vector | <small> 3D only</small> |
+|              |  |
+|--------------|--|
+| `FeatureLayer` | <small>2D & 3D</small> |
+| `CSVLayer` | <small>2D & 3D</small> |
+| `StreamLayer` | <small>2D & 3D</small> |
+| `MapImageLayer` | <small>2D & 3D</small> |
+| `ImageryLayer` | <small>2D & 3D</small> |
+| `WMSLayer` | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | <small>2D & 3D</small> |
+| `TileLayer` | <small>2D & 3D</small> |
+| `WebTileLayer` | <small>2D & 3D</small> |
+| `WMTSLayer` | <small>2D & 3D</small> |
+| `VectorTileLayer` | <small>2D & 3D</small> |
+| `ElevationLayer` | <small> 3D only</small> |
+| `SceneLayer` | <small> 3D only</small> |
+| `IntegratedMeshLayer` | <small> 3D only</small> |
+| `PointCloudLayer` | <small> 3D only</small> |
 
 ---
 
@@ -587,23 +589,23 @@
 
 ## Layers
 
-| Layer type   | Characteristics | |
-|--------------|-----------------|-|
-| `FeatureLayer` | vector | <small>2D & 3D</small> |
-| `CSVLayer` | vector | <small>2D & 3D</small> |
-| `StreamLayer` | vector | <small>2D & 3D</small> |
-| `MapImageLayer` | dynamic | <small>2D & 3D</small> |
-| `ImageryLayer` | dynamic | <small>2D & 3D</small> |
-| `WMSLayer` | dynamic | <small>2D & 3D</small> |
-| `OpenStreetMapLayer` | raster, cached | <small>2D & 3D</small> |
-| `TileLayer` | raster, cached | <small>2D & 3D</small> |
-| `WebTileLayer` | raster, cached | <small>2D & 3D</small> |
-| `WMTSLayer` | raster, cached | <small>2D & 3D</small> |
-| `VectorTileLayer` | vector, cached | <small>2D & 3D</small> |
-| `ElevationLayer` | raster, cached | <small> 3D only</small> |
-| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`SceneLayer`</div> | vector | <small> 3D only</small> |
-| `IntegratedMeshLayer` | vector | <small> 3D only</small> |
-| `PointCloudLayer` | vector | <small> 3D only</small> |
+|              |  |
+|--------------|--|
+| <div style="font-size: 300%; background: rgba(27, 75, 127, 0.55); position: absolute;">`FeatureLayer`</div> | <small>2D & 3D</small> |
+| `CSVLayer` | <small>2D & 3D</small> |
+| `StreamLayer` | <small>2D & 3D</small> |
+| `MapImageLayer` | <small>2D & 3D</small> |
+| `ImageryLayer` | <small>2D & 3D</small> |
+| `WMSLayer` | <small>2D & 3D</small> |
+| `OpenStreetMapLayer` | <small>2D & 3D</small> |
+| `TileLayer` | <small>2D & 3D</small> |
+| `WebTileLayer` | <small>2D & 3D</small> |
+| `WMTSLayer` | <small>2D & 3D</small> |
+| `VectorTileLayer` | <small>2D & 3D</small> |
+| `ElevationLayer` | <small> 3D only</small> |
+| `SceneLayer` | <small> 3D only</small> |
+| `IntegratedMeshLayer` | <small> 3D only</small> |
+| `PointCloudLayer` | <small> 3D only</small> |
 
 ---
 
@@ -618,18 +620,18 @@
           "esri/views/SceneView",
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          "esri/layers/SceneLayer",
+          "esri/layers/FeatureLayer",
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           "dojo/domReady!"
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-        ], function(WebScene, SceneView, SceneLayer) {
+        ], function(WebScene, SceneView, FeatureLayer) {
     </code>
     <code style="margin-bottom: -40px;" class="grey">
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
@@ -638,15 +640,14 @@
           });
     </code>
     <code style="margin-bottom: -40px;" class="lang-js">
-          var layer = new SceneLayer({
+          var layer = new FeatureLayer({
             portalItem: {
-              id: "2e0761b9a4274b8db52c4bf34356911e"
+              id: "a38c0bd41aad41d89ab2a31050ff07b1"
             }
           });
           scene.add(layer);
     </code>
     <code class="grey">
-          // Go to layer..
         });
     </code></pre>
     </div>
@@ -665,25 +666,24 @@
         require([
           "esri/WebScene",
           "esri/views/SceneView",
-          "esri/layers/SceneLayer",
+          "esri/layers/FeatureLayer",
           "dojo/domReady!"
-        ], function(WebScene, SceneView, SceneLayer) {
+        ], function(WebScene, SceneView, FeatureLayer) {
           var scene = new WebScene({
             portalItem: {
-              id: "3a9976baef9240ab8645ee25c7e9c096"
+              id: "e5dab9bfc78a46d08276b185026fc20a"
             }
           });
           var view = new SceneView({
             container: "viewDiv",
             map: scene
           });
-          var layer = new SceneLayer({
+          var layer = new FeatureLayer({
             portalItem: {
-              id: "2e0761b9a4274b8db52c4bf34356911e"
+              id: "a38c0bd41aad41d89ab2a31050ff07b1"
             }
           });
           scene.add(layer);
-          // Go to layer...
         });
     </code></pre>
     </div>
@@ -707,6 +707,7 @@
 - `Legend`
 - `LayerList`
 - `Search`
+- ...
 
 
 ---
@@ -807,14 +808,17 @@
 
 <div class="two-columns">
   <div class="left-column">
-The popup widget allows users to view content from the feature attributes. 
-
+<div>Enable on a layer:</div>
+  <div class="code-snippet" style="font-size: 120%;margin-top: 20px;">
+    <pre><code class="lang-js" style="margin-bottom: 20px;">
+  layer.popupEnabled = true;
+</code></pre></div>
 
 <br><br>
 <div>
-You can enable it programmatically:
+Open it programmatically:
 </div>
-      <div class="code-snippet" style="font-size: 120%;margin-top: 50px;">
+      <div class="code-snippet" style="font-size: 120%;margin-top: 30px;">
         <pre><code class="lang-js">
   view.on("click", function(event) {
     event.stopPropagation();
@@ -848,9 +852,9 @@ You can enable it programmatically:
       <pre><code class="lang-js">
   var template = {
     title: "Building <b>{NAME}</b>",
-    content: "This build has <b>{NUM_FLOORS}</b> floors," 
-      + " for a height of <b>{HEIGHTROOF}</b> ft.<br/>"
-      + "It has been built in <b>{CNSTRCT_YR}.</b>"
+    content: "This build has an enery consumption<br/>"
+      + "of <b>{ElectricUse}</b> kBTU, for a score "
+      + "of <b>{StarScore}</b>."
   };
   layer.popupTemplate = template;
       </code></pre>

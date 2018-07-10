@@ -9,7 +9,7 @@ function snippet(containers, interlinks) {
   ], function(WebScene, SceneView, SceneLayer, Search) {
     var scene = new WebScene({
       portalItem: {
-        id: "3a9976baef9240ab8645ee25c7e9c096"
+        id: "e5dab9bfc78a46d08276b185026fc20a"
       }
     });
     var view = new SceneView({
@@ -21,13 +21,16 @@ function snippet(containers, interlinks) {
         heading: 50
       }
     });
-    var layer = new SceneLayer({
-      url: "https://tiles.arcgis.com/tiles/cFEFS0EWrhfDeVw9/arcgis/rest/services/Buildings_Manhattan/SceneServer",
-      popupTemplate: {
+     scene.when(function() {
+      scene.layers.items[1].popupTemplate = {
         title: "Building <b>{NAME}</b>",
-        content: "This build has <b>{NUM_FLOORS}</b> floors, for a height of <b>{HEIGHTROOF}</b>ft.<br/>"
-          + "It has been built in <b>{CNSTRCT_YR}</b>"
-      }
+        content: "This build has an enery consumption<br/>"
+          + "of <b>{ElectricUse}</b> kBTU, for a score "
+          + "of <b>{StarScore}</b>."
+      };
+    });
+    var layer = new SceneLayer({
+      url: "http://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/NYC_Tree_Clipped/FeatureServer"
     });
     scene.add(layer);
     var searchWidget = new Search({
