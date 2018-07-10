@@ -1153,6 +1153,14 @@ sceneLayer.renderer = {
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
+### ArcGIS API for JavaScript: 3D Visualization
+Thursday, 10:00 am - 11:00 am<br/>
+Room 33C
+
+---
+
 ## [Underground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html)
 
 <div class="two-columns">
@@ -1181,14 +1189,6 @@ ground.navigationConstraint = {
     <iframe id="scene-layer-mesh2" data-src="./snippets/concepts-underground.html" ></iframe>
   </div>
 </div>
-
----
-
-<!-- .slide: data-background="../images/bg-4.png" -->
-
-### ArcGIS API for JavaScript: 3D Visualization
-Thursday, 10:00 am - 11:00 am<br/>
-Room 33C
 
 ---
 
