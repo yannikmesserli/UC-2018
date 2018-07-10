@@ -1153,6 +1153,37 @@ sceneLayer.renderer = {
 
 ---
 
+## [Underground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html)
+
+<div class="two-columns">
+  <div class="left-column">
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="underground-button01"></button>
+<pre><code class="lang-js">// Ground object is part of Map/WebScene
+var ground = webScene.ground;
+
+// Set ground to 50% transparent
+ground.opacity = 0.5;
+</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="underground-button02"></button>
+<pre><code class="lang-js">// allow camera to go underground
+ground.navigationConstraint = {
+  type: "none"
+};
+</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="scene-layer-mesh2" data-src="./snippets/concepts-underground.html" ></iframe>
+  </div>
+</div>
+
+---
+
 <!-- .slide: data-background="../images/bg-4.png" -->
 
 ### ArcGIS API for JavaScript: 3D Visualization
