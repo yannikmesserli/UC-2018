@@ -1274,7 +1274,12 @@ Room 33C
 <!-- .slide: data-background="../images/bg-8.png" -->
 
 <img class="plain" src="../images/esri-science-logo-white.png" background=none>
-=======
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+
 ### Skyscraper explorer
 
 <iframe id="scene-view-map-view" data-src="https://esri.github.io/Manhattan-skyscraper-explorer/"></iframe>
