@@ -10,4 +10,4 @@ Part "3D apps": https://yannikmesserli.github.io/UC-2018/presentations/mobile-we
 
 Learn how to build 3D interactive web applications using the ArcGIS API for JavaScript. The new 4.x version comes with a modern and easy-to-use programming interface that minimizes the amount of code needed to build compelling browser-based 3D GIS applications. This session will cover (1) the workflow of authoring and publishing 3D content in ArcGIS Pro and CityEngine, (2) the development of web apps based on 3D layers and web scenes in ArcGIS Online or Portal for ArcGIS, and (3) an overview of advanced visualization capabilities including how you can create your own customized WebGL renderers in JavaScript.
 
-Part "Building your first app": https://yannikmesserli.github.io/UC-2018/presentations/building-apps-with-arcgis-js-api
+https://yannikmesserli.github.io/UC-2018/presentations/building-apps-with-arcgis-js-api
