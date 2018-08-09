@@ -903,12 +903,16 @@ Open it programmatically:
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
 ## Architecture
 
 
 <img src="../images/concepts-architecture.png" width="800" style="border: none; background: none; box-shadow: none"/>
 
 ---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## Working with the [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html)
 
@@ -933,6 +937,8 @@ class SceneView {
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
 ## [Camera](https://developers.arcgis.com/javascript/latest/api-reference/esri-Camera.html)
 
 - Primary specification of the view is the [`Camera`](https://developers.arcgis.com/javascript/beta/api-reference/esri-Camera.html)
@@ -954,6 +960,8 @@ class Camera {
 </div>
 
 ---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## [Camera](https://developers.arcgis.com/javascript/latest/api-reference/esri-Camera.html)
 
@@ -979,6 +987,8 @@ view.camera = camera;</code></pre>
 </div>
 
 ---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## [goTo](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#goTo)
 
@@ -1015,6 +1025,8 @@ view.goTo({
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
 ## [toMap](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#toMap)
 
 <div class="two-columns">
@@ -1043,6 +1055,8 @@ view.on("click", function(event) {
 
 ---
 
+<!-- .slide: data-background="../images/bg-4.png" -->
+
 ## Working with layers
 
 <div class="code-snippet" style="font-size: 160%;">
@@ -1063,6 +1077,8 @@ class SceneLayer {
 </div>
 
 ---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## Filtering
 
@@ -1098,6 +1114,8 @@ sceneLayer.definitionExpression =
 </div>
 
 ---
+
+<!-- .slide: data-background="../images/bg-4.png" -->
 
 ## Assigning a renderer
 
