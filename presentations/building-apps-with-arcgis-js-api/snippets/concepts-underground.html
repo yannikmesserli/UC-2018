@@ -23,57 +23,45 @@
     var view;
 
     require([
-      "esri/Map",
+      "esri/WebScene",
       "esri/views/SceneView",
       "dojo/domReady!"
-    ], function(Map, SceneView) {
+    ], function(WebScene, SceneView) {
 
       view = new SceneView({
         container: "viewDiv",
 
-        map: new Map({
-          basemap: "hybrid",
-          ground: "world-elevation"
-        }),
-
-        camera: {
-          position: {
-            x: 8.062,
-            y: 46.042,
-            z: 14813.5
-          },
-          heading: 0,
-          tilt: 72
-        },
-
-        ui: {
-          components: ["attribution", "compass"]
-        },
-
-        environment: {
-          atmosphere: {
-            quality: "high"
+        map: new WebScene({
+          portalItem: {
+            id: "af7fca035740444daab8bd3c5478d375"
           }
-        },
-
-        qualityProfile: "high"
+        })
       });
 
-      window.increaseHeading = () => {
-        var camera = view.camera.clone();
-        camera.heading += 5
-        view.camera = camera;
+      window.setGroundOpacity = () => {
+        view.map.ground.opacity = 0.5;
+      };
+
+      window.setUndergroundNavigation = () => {
+        view.map.ground.navigationConstraint = {
+          type: "none"
+        };
       };
 
       // presentation specific
       view.when(() => {
         if (window.parent) {
-          var button01 = window.parent.document.getElementById("scene-view-camera-button01")
+          var button01 = window.parent.document.getElementById("underground-button01");
 
           if (button01) {
-            button01.onclick = window.increaseHeading;
+            button01.onclick = window.setGroundOpacity;
           }
 
+          var button02 = window.parent.document.getElementById("underground-button02");
+
+          if (button02) {
+            button02.onclick = window.setUndergroundNavigation;
+          }
           window.parent.demo = window;
         }
       });

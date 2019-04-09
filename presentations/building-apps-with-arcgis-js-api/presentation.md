@@ -906,9 +906,14 @@ Open it programmatically:
 <!-- .slide: data-background="../images/bg-4.png" -->
 
 ## Architecture
+<br/>
+<img src="../images/concepts-architecture2.png" width="60%" style="border: none; background: none; box-shadow: none"/>
 
+---
 
-<img src="../images/concepts-architecture.png" width="800" style="border: none; background: none; box-shadow: none"/>
+## Architecture
+<br/>
+<img src="../images/concepts-architecture3.png" width="60%" style="border: none; background: none; box-shadow: none"/>
 
 ---
 
@@ -1062,11 +1067,11 @@ view.on("click", function(event) {
 <div class="code-snippet" style="font-size: 160%;">
   <pre><code class="lang-ts">
 class SceneLayer {
-  // Renderer assigns each feature a color and style
-  renderer: Renderer;
-
   // Filtering 
   definitionExpression: string;
+
+  // Renderer assigns each feature a color and style
+  renderer: Renderer;
 
   // Querying
   queryFeatures(params: Query): FeatureSet;
@@ -1117,7 +1122,7 @@ sceneLayer.definitionExpression =
 
 <!-- .slide: data-background="../images/bg-4.png" -->
 
-## Assigning a renderer
+## Setting layer style
 
 <div class="two-columns">
   <div class="left-column">
@@ -1171,6 +1176,37 @@ sceneLayer.renderer = {
 ### ArcGIS API for JavaScript: 3D Visualization
 Thursday, 10:00 am - 11:00 am<br/>
 Room 33C
+
+---
+
+## [Underground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html)
+
+<div class="two-columns">
+  <div class="left-column">
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="underground-button01"></button>
+<pre><code class="lang-js">// Ground object is part of Map/WebScene
+var ground = webScene.ground;
+
+// Set ground to 50% transparent
+ground.opacity = 0.5;
+</code></pre>
+</div>
+
+<div class="code-snippet" style="font-size: 130%;">
+<button class="play" id="underground-button02"></button>
+<pre><code class="lang-js">// allow camera to go underground
+ground.navigationConstraint = {
+  type: "none"
+};
+</code></pre>
+</div>
+
+  </div>
+  <div class="right-column">
+    <iframe id="scene-layer-mesh2" data-src="./snippets/concepts-underground.html" ></iframe>
+  </div>
+</div>
 
 ---
 
@@ -1256,7 +1292,12 @@ Room 33C
 <!-- .slide: data-background="../images/bg-8.png" -->
 
 <img class="plain" src="../images/esri-science-logo-white.png" background=none>
-=======
+
+---
+
+<!-- .slide: data-background="../images/bg-5.png" -->
+
+
 ### Skyscraper explorer
 
 <iframe id="scene-view-map-view" data-src="https://esri.github.io/Manhattan-skyscraper-explorer/"></iframe>
